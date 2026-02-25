@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,11 +14,13 @@
   <link rel="icon" href="./favicon.ico" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
   <aside class="left-rail" aria-hidden="true">
     <div class="rail-brand">R</div>
     <nav class="rail-nav">
-      <a class="rail-btn active" href="#downloads" aria-label="Downloads">D</a>
+      <a class="rail-btn active" href="#visao-geral" aria-label="Visão Geral">V</a>
+      <a class="rail-btn" href="#downloads" aria-label="Downloads">D</a>
       <a class="rail-btn" href="#apoio" aria-label="Apoio">A</a>
     </nav>
   </aside>
@@ -29,9 +32,24 @@
         <h1>Ratio Juris</h1>
       </div>
       <div class="top-actions">
+        <!-- Trust indicators / Badges (Desktop) -->
+        <a class="chip-btn" href="https://github.com/carlosvictorodrigues/Ratio/stargazers" target="_blank"
+          rel="noopener noreferrer" style="display:flex;align-items:center;gap:4px;">
+          <svg style="width:12px;height:12px;" viewBox="0 0 16 16" fill="currentColor">
+            <path
+              d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z">
+            </path>
+          </svg>
+          Star
+        </a>
+        <a class="chip-btn" href="https://github.com/carlosvictorodrigues/Ratio/blob/main/LICENSE" target="_blank"
+          rel="noopener noreferrer">Free / Open-Source</a>
+        <div style="width: 1px; height: 16px; background: var(--stone-300); margin: 0 4px;"></div>
+        <a class="chip-btn" href="#visao-geral">Visão Geral</a>
         <a class="chip-btn" href="#downloads">Downloads</a>
         <a class="chip-btn" href="#apoio">Apoiar Projeto</a>
-        <a class="chip-btn" href="https://github.com/carlosvictorodrigues/Ratio" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="chip-btn" href="https://github.com/carlosvictorodrigues/Ratio" target="_blank"
+          rel="noopener noreferrer">GitHub</a>
       </div>
     </header>
 
@@ -41,12 +59,40 @@
           <p class="hero-kicker">Portal do projeto</p>
           <h2 class="hero-title">Download e Apoio do Ratio</h2>
           <p class="hero-subtitle">
-            Aqui você encontra os links oficiais para download da versão mais recente do 
+            Aqui você encontra os links oficiais para download da versão mais recente do
             Ratio (Pesquisa Jurisprudencial com IA) e as opções para apoiar o desenvolvimento do projeto livre.
           </p>
           <div class="hero-meta">
             <span class="tag">domínio: ratiojuris.me</span>
             <span class="tag">canal: estável</span>
+          </div>
+        </section>
+
+        <!-- NOVO: Visão Geral / Home -->
+        <section id="visao-geral" class="panel-shell">
+          <div class="panel-head">
+            <h2>Visão Geral do Projeto</h2>
+          </div>
+          <div style="padding: 16px; font-size: 14px; color: #44403c; line-height: 1.6;">
+            <p style="margin-top: 0;">O <strong>Ratio</strong> é uma plataforma avançada de pesquisa jurisprudencial
+              construída com Inteligência Artificial, projetada para rodar localmente no seu computador pessoal.</p>
+
+            <p>Diferente de chats comuns que "adivinham" respostas, o Ratio opera sob um princípio rigoroso de
+              <strong>Anti-Alucinação</strong>: ele não acessa a internet livre para responder.</p>
+
+            <ul style="margin: 12px 0 16px 20px; padding: 0;">
+              <li style="margin-bottom: 8px;"><strong>Base de Dados Fixa:</strong> Consulta exclusivamente o acervo
+                interno contendo mais de <strong>1.1 milhão de documentos processados</strong>.</li>
+              <li style="margin-bottom: 8px;"><strong>Fluxo RAG:</strong> Identifica passagens específicas no acervo e
+                fundamenta a resposta gerando um <strong>Dossiê Documental</strong> anexo a cada pesquisa.</li>
+              <li style="margin-bottom: 8px;"><strong>Operação Local:</strong> Os arquivos e bancos vetoriais ficam no
+                seu disco (Offline). Apenas a escrita final passa pelo modelo selecionado.</li>
+              <li style="margin-bottom: 0;"><strong>Código Aberto:</strong> O Ratio é distribuído gratuitamente
+                (Open-Source), garantindo transparência técnica à comunidade jurídica.</li>
+            </ul>
+
+            <p style="margin-bottom: 0;">Para conhecer a lista completa de funcionalidades (Níveis de Força Normativa,
+              Ferramentas de Áudio, Filtros Judiciais), consulte a documentação oficial ou o GitHub do projeto.</p>
           </div>
         </section>
 
@@ -65,23 +111,41 @@
       <aside id="apoio" class="evidence-panel panel-shell">
         <h2>Apoio ao Projeto</h2>
         <p class="panel-note">
-          Se o Ratio for útil no seu fluxo de pesquisa, considere fazer uma doação para manter o projeto vivo e auxiliar nos gastos com desenvolvimento.
+          Se o Ratio for útil no seu fluxo de pesquisa, considere fazer uma doação para manter o projeto vivo e auxiliar
+          nos gastos com desenvolvimento.
         </p>
-        
+
         <div style="margin-top: 14px; display: grid; gap: 10px;">
-           <div class="download-card" style="text-align: center;">
-              <h3 class="download-title">Doação via PIX</h3>
-              <p class="download-meta">QR Code</p>
-              <img src="./apoio-pix.jpeg" alt="QR Code PIX" style="max-width: 100%; border-radius: 4px; margin-top: 8px;" />
-              <p class="entry-body" style="font-size: 11px; margin-top: 8px;">
-                Copia e cola: (adicione seu Pix aqui se tiver o hash textual)
-              </p>
-           </div>
+          <div class="download-card" style="text-align: center;">
+            <h3 class="download-title">Doação via PIX</h3>
+            <p class="download-meta">QR Code</p>
+            <img src="./apoio-pix.jpeg" alt="QR Code PIX"
+              style="max-width: 100%; border-radius: 4px; margin-top: 8px;" />
+
+            <div style="margin-top: 12px;">
+              <button onclick="copyPix()"
+                style="width: 100%; cursor: pointer; background: var(--stone-900); color: var(--stone-50); border: none; border-radius: 4px; padding: 8px; font-family: var(--mono); font-size: 11px; text-transform: uppercase; font-weight: 600; display: flex; justify-content: center; align-items: center; gap: 6px;">
+                <svg style="width:14px;height:14px;" viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                  </path>
+                  <path
+                    d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                  </path>
+                </svg>
+                <span id="pixCopyText">Copiar Chave PIX</span>
+              </button>
+              <!-- Substitua o value="suachavepix" pela chave PIX real no input abaixo -->
+              <input type="text" id="pixKeyInput" value="suachaveaqui@email.com"
+                style="position: absolute; left: -9999px;" aria-hidden="true" tabindex="-1" />
+            </div>
+          </div>
         </div>
 
         <div class="panel-foot">
           <p>Dúvidas de instalação: consulte o README oficial do projeto.</p>
-          <a class="source-link" href="https://github.com/carlosvictorodrigues" target="_blank" rel="noopener noreferrer">Perfil no GitHub</a>
+          <a class="source-link" href="https://github.com/carlosvictorodrigues" target="_blank"
+            rel="noopener noreferrer">Perfil no GitHub</a>
         </div>
       </aside>
     </section>
@@ -89,4 +153,5 @@
 
   <script src="./app.js"></script>
 </body>
+
 </html>

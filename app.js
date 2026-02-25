@@ -4,7 +4,7 @@ const downloads = [
     platform: "Windows x64",
     version: "v2026.02.25",
     packageSize: "aprox. 13.7 GB (com base local)",
-    notes: "Pacote completo com executável do Ratio e a base de busca unificada pronta para uso.",
+    notes: "Acesse as Releases no GitHub, baixe o arquivo ZIP (pasta dist/Ratio), descompacte-o na sua máquina e inicie pelo Ratio.exe.",
     primaryUrl: "https://github.com/carlosvictorodrigues/ratio/releases",
     secondaryUrl: "https://github.com/carlosvictorodrigues/ratio"
   },
@@ -67,6 +67,31 @@ function render() {
   if (!downloadsList) return;
 
   downloads.forEach((entry) => downloadsList.appendChild(createDownloadCard(entry)));
+}
+
+function copyPix() {
+  const copyText = document.getElementById("pixKeyInput");
+  const buttonText = document.getElementById("pixCopyText");
+  if (!copyText || !buttonText) return;
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  try {
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+
+    // Provide user feedback
+    const originalText = buttonText.textContent;
+    buttonText.textContent = "Copiado!";
+
+    setTimeout(() => {
+      buttonText.textContent = originalText;
+    }, 2000);
+  } catch (err) {
+    console.error('Failed to copy text: ', err);
+  }
 }
 
 render();

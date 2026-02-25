@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ratio - Atualizacoes e Downloads</title>
+  <meta name="description" content="Portal oficial do Ratio para atualizacoes, correcoes de bugs e downloads." />
+  <meta property="og:title" content="Ratio - Atualizacoes e Downloads" />
+  <meta property="og:description" content="Notas de versao, correcoes e downloads atualizados do Ratio." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ratiojuris.me" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <aside class="left-rail" aria-hidden="true">
+    <div class="rail-brand">R</div>
+    <nav class="rail-nav">
+      <a class="rail-btn active" href="#atualizacoes" aria-label="Atualizacoes">U</a>
+      <a class="rail-btn" href="#correcoes" aria-label="Correcoes">B</a>
+      <a class="rail-btn" href="#downloads" aria-label="Downloads">D</a>
+    </nav>
+  </aside>
+
+  <main class="app-shell">
+    <header class="top-header">
+      <div class="top-brand">
+        <p class="eyebrow">RATIO</p>
+        <h1>Atualizacoes Oficiais</h1>
+      </div>
+      <div class="top-actions">
+        <a class="chip-btn" href="#downloads">Downloads</a>
+        <a class="chip-btn" href="https://github.com/carlosvictorodrigues" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </header>
+
+    <section class="workspace-grid">
+      <section class="content-main">
+        <section class="hero-wrap">
+          <p class="hero-kicker">Portal do projeto</p>
+          <h2 class="hero-title">Notas de versao, correcoes e pacotes atualizados</h2>
+          <p class="hero-subtitle">
+            Aqui voce encontra o historico oficial do Ratio com mudancas por versao,
+            correcoes de bugs e links de download prontos para uso.
+          </p>
+          <div class="hero-meta">
+            <span class="tag">dominio: ratiojuris.me</span>
+            <span class="tag">canal: estavel</span>
+          </div>
+        </section>
+
+        <section id="atualizacoes" class="panel-shell">
+          <div class="panel-head">
+            <h2>Atualizacoes</h2>
+          </div>
+          <div id="updatesList" class="timeline-list"></div>
+        </section>
+
+        <section id="correcoes" class="panel-shell">
+          <div class="panel-head">
+            <h2>Correcoes de Bugs</h2>
+          </div>
+          <div id="bugsList" class="timeline-list"></div>
+        </section>
+      </section>
+
+      <aside id="downloads" class="evidence-panel panel-shell">
+        <h2>Downloads atualizados</h2>
+        <p class="panel-note">
+          Sempre use a versao mais recente. Para Windows, baixe o pacote completo e execute apenas o arquivo `.exe`.
+        </p>
+        <div id="downloadsList" class="downloads-list"></div>
+
+        <div class="panel-foot">
+          <p>Duvidas de instalacao: consulte o README do projeto Ratio.</p>
+          <a class="source-link" href="https://github.com/carlosvictorodrigues" target="_blank" rel="noopener noreferrer">perfil no GitHub</a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

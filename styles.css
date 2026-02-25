@@ -245,6 +245,41 @@ body {
   gap: 12px;
 }
 
+.menu-grid {
+  padding: 12px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.panel-menu {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.menu-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  border-radius: 6px;
+  border: 1px solid var(--stone-300);
+  background: #f8f7f6;
+  color: #3f3934;
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+}
+
+.menu-link:hover {
+  border-color: var(--stone-400);
+  color: #1c1917;
+}
+
 .entry-card {
   background: #ffffff;
   border: 1px solid var(--stone-200);
@@ -292,6 +327,18 @@ body {
 
 .entry-list li + li {
   margin-top: 4px;
+}
+
+.entry-quote {
+  margin: 10px 0 0;
+  border-left: 3px solid #c9c4be;
+  padding: 8px 10px;
+  background: #faf9f8;
+  border-radius: 4px;
+  color: #59544f;
+  font-size: 12px;
+  line-height: 1.5;
+  font-style: italic;
 }
 
 .badge {

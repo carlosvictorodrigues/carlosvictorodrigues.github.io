@@ -87,7 +87,78 @@ const downloads = [
   }
 ];
 
-function createEntryCard(entry, badgeLabel) {
+const tutorialHighlights = [
+  {
+    id: "GUIA-01",
+    date: "25/02/2026",
+    title: "Visao geral e principio anti-alucinacao",
+    summary: "O Ratio responde com base em acervo juridico local, com foco em reduzir respostas inventadas.",
+    items: [
+      "Fluxo de consulta com recuperacao de documentos da base local antes da geracao.",
+      "Quando nao encontra base suficiente, o sistema deve sinalizar limite da evidencia."
+    ],
+    quote:
+      "\"A Regra de Ouro: Nao invente. Diga que nao encontrou se a resposta nao constar nos documentos resgatados.\""
+  },
+  {
+    id: "GUIA-02",
+    date: "25/02/2026",
+    title: "Fluxo RAG em quatro etapas",
+    summary: "Cada pergunta passa por embeddings, busca hibrida, rerank e geracao com citacoes.",
+    items: [
+      "Embeddings para assinatura semantica da pergunta.",
+      "Busca vetorial + lexical no acervo.",
+      "Rerank para priorizar precedentes mais aderentes.",
+      "Resposta final com referencia documental."
+    ]
+  },
+  {
+    id: "GUIA-03",
+    date: "25/02/2026",
+    title: "Forca normativa A-E e filtros",
+    summary: "A plataforma classifica fontes por peso juridico e permite ligar/desligar recortes por tribunal e tipo.",
+    items: [
+      "Nivel A: vinculante forte; Nivel B: precedentes qualificados; Nivel C: sumulas.",
+      "Niveis D e E funcionam como apoio orientativo e editorial.",
+      "Filtros de STF/STJ e tipos documentais refinam a consulta."
+    ]
+  }
+];
+
+const faq = [
+  {
+    id: "FAQ-API",
+    date: "25/02/2026",
+    title: "Chave Gemini valida, mas onboarding demora",
+    summary: "A validacao pode sofrer latencia de rede/API. A chave agora pode ser salva mesmo com validacao pendente.",
+    items: [
+      "Verifique conectividade com Google AI Studio.",
+      "Repita a validacao depois, sem bloquear o uso inicial."
+    ]
+  },
+  {
+    id: "FAQ-DB",
+    date: "25/02/2026",
+    title: "Executavel abre, mas consulta falha",
+    summary: "Confirme se `lancedb_store` esta na mesma pasta do `Ratio.exe`.",
+    items: [
+      "Pacote oficial atual ja inclui a base no `dist\\Ratio`.",
+      "Se mover o `.exe` sozinho, o app perde acesso ao banco."
+    ]
+  },
+  {
+    id: "FAQ-AUDIO",
+    date: "25/02/2026",
+    title: "Audio nao toca em alguns cenarios",
+    summary: "A sintese usa Gemini TTS nativo e depende da mesma chave Gemini da busca.",
+    items: [
+      "Confirme chave ativa e saldo/cota no projeto Gemini.",
+      "Teste uma consulta curta antes de audios longos."
+    ]
+  }
+];
+
+function createEntryCard(entry, badgeLabel, options = {}) {
   const card = document.createElement("article");
   card.className = "entry-card";
 
@@ -126,6 +197,14 @@ function createEntryCard(entry, badgeLabel) {
   badge.className = "badge";
   badge.textContent = badgeLabel;
   card.appendChild(badge);
+
+  const quote = String(options.quote || entry.quote || "").trim();
+  if (quote) {
+    const quoteEl = document.createElement("p");
+    quoteEl.className = "entry-quote";
+    quoteEl.textContent = quote;
+    card.appendChild(quoteEl);
+  }
 
   return card;
 }
@@ -177,10 +256,14 @@ function render() {
   const updatesList = document.getElementById("updatesList");
   const bugsList = document.getElementById("bugsList");
   const downloadsList = document.getElementById("downloadsList");
-  if (!updatesList || !bugsList || !downloadsList) return;
+  const tutorialList = document.getElementById("tutorialList");
+  const faqList = document.getElementById("faqList");
+  if (!updatesList || !bugsList || !downloadsList || !tutorialList || !faqList) return;
 
   updates.forEach((entry) => updatesList.appendChild(createEntryCard(entry, "release")));
   bugfixes.forEach((entry) => bugsList.appendChild(createEntryCard(entry, "bugfix")));
+  tutorialHighlights.forEach((entry) => tutorialList.appendChild(createEntryCard(entry, "tutorial", { quote: entry.quote })));
+  faq.forEach((entry) => faqList.appendChild(createEntryCard(entry, "faq")));
   downloads.forEach((entry) => downloadsList.appendChild(createDownloadCard(entry)));
 }
 

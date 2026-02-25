@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ratio - Atualizacoes e Downloads</title>
-  <meta name="description" content="Portal oficial do Ratio para atualizacoes, correcoes de bugs e downloads." />
-  <meta property="og:title" content="Ratio - Atualizacoes e Downloads" />
-  <meta property="og:description" content="Notas de versao, correcoes e downloads atualizados do Ratio." />
+  <title>Ratio - Atualizações e Downloads</title>
+  <meta name="description" content="Portal oficial do Ratio para atualizações e downloads." />
+  <meta property="og:title" content="Ratio - Atualizações e Downloads" />
+  <meta property="og:description" content="Downloads atualizados do Ratio." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ratiojuris.me" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -17,11 +17,8 @@
   <aside class="left-rail" aria-hidden="true">
     <div class="rail-brand">R</div>
     <nav class="rail-nav">
-      <a class="rail-btn active" href="#atualizacoes" aria-label="Atualizacoes">U</a>
-      <a class="rail-btn" href="#correcoes" aria-label="Correcoes">B</a>
-      <a class="rail-btn" href="#guia" aria-label="Guia">G</a>
-      <a class="rail-btn" href="#faq" aria-label="FAQ">F</a>
-      <a class="rail-btn" href="#downloads" aria-label="Downloads">D</a>
+      <a class="rail-btn active" href="#downloads" aria-label="Downloads">D</a>
+      <a class="rail-btn" href="#apoio" aria-label="Apoio">A</a>
     </nav>
   </aside>
 
@@ -29,13 +26,12 @@
     <header class="top-header">
       <div class="top-brand">
         <p class="eyebrow">RATIO</p>
-        <h1>Atualizacoes Oficiais</h1>
+        <h1>Ratio Juris</h1>
       </div>
       <div class="top-actions">
-        <a class="chip-btn" href="#menus">Menu</a>
-        <a class="chip-btn" href="#guia">Guia rapido</a>
         <a class="chip-btn" href="#downloads">Downloads</a>
-        <a class="chip-btn" href="https://github.com/carlosvictorodrigues" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="chip-btn" href="#apoio">Apoiar Projeto</a>
+        <a class="chip-btn" href="https://github.com/carlosvictorodrigues/Ratio" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </header>
 
@@ -43,78 +39,49 @@
       <section class="content-main">
         <section class="hero-wrap">
           <p class="hero-kicker">Portal do projeto</p>
-          <h2 class="hero-title">Notas de versao, correcoes e pacotes atualizados</h2>
+          <h2 class="hero-title">Download e Apoio do Ratio</h2>
           <p class="hero-subtitle">
-            Aqui voce encontra o historico oficial do Ratio com mudancas por versao,
-            correcoes de bugs e links de download prontos para uso.
+            Aqui você encontra os links oficiais para download da versão mais recente do 
+            Ratio (Pesquisa Jurisprudencial com IA) e as opções para apoiar o desenvolvimento do projeto livre.
           </p>
           <div class="hero-meta">
-            <span class="tag">dominio: ratiojuris.me</span>
-            <span class="tag">canal: estavel</span>
-            <span class="tag">tutorial integrado</span>
+            <span class="tag">domínio: ratiojuris.me</span>
+            <span class="tag">canal: estável</span>
           </div>
         </section>
 
-        <section id="menus" class="panel-shell">
+        <section id="downloads" class="panel-shell">
           <div class="panel-head">
-            <h2>Menus Rapidos</h2>
+            <h2>Downloads</h2>
           </div>
-          <div class="menu-grid">
-            <a class="menu-link" href="#atualizacoes">Atualizacoes</a>
-            <a class="menu-link" href="#correcoes">Correcoes</a>
-            <a class="menu-link" href="#guia">Trechos do tutorial</a>
-            <a class="menu-link" href="#faq">FAQ operacional</a>
-            <a class="menu-link" href="#downloads">Downloads</a>
-          </div>
-        </section>
-
-        <section id="atualizacoes" class="panel-shell">
-          <div class="panel-head">
-            <h2>Atualizacoes</h2>
-          </div>
-          <div id="updatesList" class="timeline-list"></div>
-        </section>
-
-        <section id="correcoes" class="panel-shell">
-          <div class="panel-head">
-            <h2>Correcoes de Bugs</h2>
-          </div>
-          <div id="bugsList" class="timeline-list"></div>
-        </section>
-
-        <section id="guia" class="panel-shell">
-          <div class="panel-head">
-            <h2>Trechos do Tutorial</h2>
-          </div>
-          <div id="tutorialList" class="timeline-list"></div>
-        </section>
-
-        <section id="faq" class="panel-shell">
-          <div class="panel-head">
-            <h2>FAQ Operacional</h2>
-          </div>
-          <div id="faqList" class="timeline-list"></div>
+          <p style="padding: 12px; font-size: 13px; color: #44403c">
+            Use as opções abaixo para baixar o Ratio pre-configurado para seu ambiente.
+            A release atualizada contém as últimas correções e uma interface embutida.
+          </p>
+          <div id="downloadsList" class="downloads-list" style="padding: 0 12px 16px 12px;"></div>
         </section>
       </section>
 
-      <aside id="downloads" class="evidence-panel panel-shell">
-        <h2>Downloads atualizados</h2>
+      <aside id="apoio" class="evidence-panel panel-shell">
+        <h2>Apoio ao Projeto</h2>
         <p class="panel-note">
-          Sempre use a versao mais recente. Para Windows, baixe o pacote completo e execute apenas o arquivo `.exe`.
+          Se o Ratio for útil no seu fluxo de pesquisa, considere fazer uma doação para manter o projeto vivo e auxiliar nos gastos com desenvolvimento.
         </p>
-
-        <nav class="panel-menu" aria-label="Menu lateral">
-          <a class="menu-link" href="#atualizacoes">Atualizacoes</a>
-          <a class="menu-link" href="#correcoes">Correcoes</a>
-          <a class="menu-link" href="#guia">Guia rapido</a>
-          <a class="menu-link" href="#faq">FAQ</a>
-        </nav>
-
-        <div id="downloadsList" class="downloads-list"></div>
+        
+        <div style="margin-top: 14px; display: grid; gap: 10px;">
+           <div class="download-card" style="text-align: center;">
+              <h3 class="download-title">Doação via PIX</h3>
+              <p class="download-meta">QR Code</p>
+              <img src="./apoio-pix.jpeg" alt="QR Code PIX" style="max-width: 100%; border-radius: 4px; margin-top: 8px;" />
+              <p class="entry-body" style="font-size: 11px; margin-top: 8px;">
+                Copia e cola: (adicione seu Pix aqui se tiver o hash textual)
+              </p>
+           </div>
+        </div>
 
         <div class="panel-foot">
-          <p>Duvidas de instalacao: consulte o README do projeto Ratio.</p>
-          <a class="source-link" href="https://github.com/carlosvictorodrigues" target="_blank" rel="noopener noreferrer">perfil no GitHub</a>
+          <p>Dúvidas de instalação: consulte o README oficial do projeto.</p>
+          <a class="source-link" href="https://github.com/carlosvictorodrigues" target="_blank" rel="noopener noreferrer">Perfil no GitHub</a>
         </div>
       </aside>
     </section>

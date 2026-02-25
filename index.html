@@ -4,187 +4,439 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ratio - Atualizações e Downloads</title>
-  <meta name="description" content="Portal oficial do Ratio para atualizações e downloads." />
-  <meta property="og:title" content="Ratio - Atualizações e Downloads" />
-  <meta property="og:description" content="Downloads atualizados do Ratio." />
+  <title>Ratio — Pesquisa Jurisprudencial com IA</title>
+  <meta name="description"
+    content="O primeiro assistente de pesquisa jurisprudencial com IA operando 100% offline. Mais de 1.1 milhão de documentos. Anti-alucinação." />
+  <meta property="og:title" content="Ratio — Pesquisa Jurisprudencial com IA" />
+  <meta property="og:description"
+    content="O primeiro assistente de pesquisa jurisprudencial com IA operando 100% offline." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ratiojuris.me" />
+  <meta property="og:image" content="./og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="./favicon.ico" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-  <aside class="left-rail" aria-hidden="true">
-    <div class="rail-brand">
-      <img src="./logotipo.png" alt="Ratio Logo">
-    </div>
-    <nav class="rail-nav">
-      <a class="rail-btn active" href="#visao-geral" aria-label="Visão Geral">V</a>
-      <a class="rail-btn" href="#downloads" aria-label="Downloads">D</a>
-      <a class="rail-btn" href="#apoio" aria-label="Apoio">A</a>
-    </nav>
-  </aside>
 
-  <main class="app-shell">
-    <header class="top-header">
-      <div class="top-brand">
-        <p class="eyebrow">RATIO</p>
-        <h1>Ratio Juris</h1>
-      </div>
-      <div class="top-actions">
-        <!-- Trust indicators / Badges (Desktop) -->
-        <a class="chip-btn" href="https://github.com/carlosvictorodrigues/Ratio/stargazers" target="_blank"
-          rel="noopener noreferrer" style="display:flex;align-items:center;gap:4px;">
-          <svg style="width:12px;height:12px;" viewBox="0 0 16 16" fill="currentColor">
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="./logotipo.png" alt="Ratio" class="nav-logo-img" />
+        <span class="nav-logo-text">RATIO</span>
+      </a>
+      <div class="nav-links">
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#funcionalidades" class="nav-link">Funcionalidades</a>
+        <a href="#downloads" class="nav-link">Download</a>
+        <a href="#apoio" class="nav-link">Apoio</a>
+        <a href="https://github.com/carlosvictorodrigues/ratio" target="_blank" rel="noopener"
+          class="nav-link nav-link-gh">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
             <path
-              d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z">
-            </path>
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
           </svg>
-          Star
+          GitHub
         </a>
-        <a class="chip-btn" href="https://github.com/carlosvictorodrigues/Ratio/blob/main/LICENSE" target="_blank"
-          rel="noopener noreferrer">Free / Open-Source</a>
-        <div style="width: 1px; height: 16px; background: var(--stone-300); margin: 0 4px;"></div>
-        <a class="chip-btn" href="#visao-geral">Visão Geral</a>
-        <a class="chip-btn" href="#downloads">Downloads</a>
-        <a class="chip-btn" href="#apoio">Apoiar Projeto</a>
-        <a class="chip-btn" href="https://github.com/carlosvictorodrigues/Ratio" target="_blank"
-          rel="noopener noreferrer">GitHub</a>
       </div>
-    </header>
+    </div>
+  </nav>
 
-    <section class="workspace-grid">
-      <section class="content-main">
-        <section class="hero-wrap">
-          <p class="hero-kicker">Plataforma</p>
-          <h2 class="hero-title">Ratio</h2>
-          <p class="hero-subtitle">
-            Pesquisa jurisprudencial local para STF/STJ com RAG e citações rastreáveis.
-          </p>
-          <div class="hero-actions">
-            <a href="#downloads" class="chip-btn hero-btn-primary">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" style="width: 14px; height: 14px;">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-              Baixar Ratio
-            </a>
-            <a href="https://github.com/carlosvictorodrigues/Ratio" target="_blank" rel="noopener noreferrer"
-              class="chip-btn">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" style="width: 14px; height: 14px;">
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                </path>
-              </svg>
-              GitHub
-            </a>
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="pill">Open-Source</span>
+        <span class="pill">Offline</span>
+        <span class="pill">Anti-Alucinação</span>
+      </div>
+      <h1 class="hero-title">
+        <em>Pesquisa jurídica</em><br>
+        com IA de verdade.
+      </h1>
+      <p class="hero-sub">
+        O Ratio consulta mais de <strong>1,1 milhão de documentos</strong> do acervo jurisprudencial brasileiro — sem
+        acessar a internet, sem inventar respostas. Cada resultado vem ancorado em fontes reais.
+      </p>
+      <div class="hero-actions">
+        <a href="#downloads" class="btn btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Baixar agora
+        </a>
+        <a href="https://github.com/carlosvictorodrigues/ratio" target="_blank" rel="noopener" class="btn btn-ghost">
+          Ver no GitHub →
+        </a>
+      </div>
+      <p class="hero-version">v2026.02.25 · Windows x64 · Free</p>
+    </div>
+    <div class="hero-visual">
+      <div class="app">
+        <!-- Query -->
+        <div class="query-box">
+          <div class="q-label">// consulta</div>
+          <div class="q-text" id="qText"></div>
+        </div>
+
+        <!-- Stage -->
+        <div class="stage">
+          <canvas id="bgCanvas"></canvas>
+
+          <!-- Scene: Tokenize -->
+          <div class="scene" id="scene-tok">
+            <div class="tok-grid" id="tokGrid"></div>
+            <div class="tok-info" id="tokInfo"></div>
           </div>
-          <div class="hero-meta-grid">
-            <article class="hero-meta-item">
-              <span>Domínio verificado</span>
-              <strong>ratiojuris.me</strong>
-            </article>
-            <article class="hero-meta-item">
-              <span>Canal de software</span>
-              <strong>Estável</strong>
-            </article>
-            <article class="hero-meta-item">
-              <span>Licença</span>
-              <strong>Open-Source</strong>
-            </article>
+
+          <!-- Scene: Embed -->
+          <div class="scene" id="scene-embed">
+            <div class="embed-title" id="embedTitle">Vetorizando tokens</div>
+            <div class="embed-items" id="embedItems"></div>
+            <div class="embed-result" id="embedResult">
+              <div class="embed-result-label">query embedding [512d]</div>
+              <div class="embed-heatmap" id="embedHm"></div>
+            </div>
           </div>
-        </section>
 
-        <!-- NOVO: Visão Geral / Home -->
-        <section id="visao-geral" class="panel-shell">
-          <div class="panel-head">
-            <h2>Visão Geral do Projeto</h2>
+          <!-- Scene: Search (canvas) -->
+          <canvas class="scene" id="scene-search" style="display:block;width:100%;height:100%;"></canvas>
+
+          <!-- Scene: Chunks -->
+          <div class="scene" id="scene-chunks">
+            <div class="chunk-card" id="c0"></div>
+            <div class="chunk-card" id="c1"></div>
+            <div class="chunk-card" id="c2"></div>
+            <div class="chunk-card" id="c3"></div>
+            <div class="chunk-card" id="c4"></div>
           </div>
-          <div style="padding: 16px; font-size: 14px; color: #44403c; line-height: 1.6;">
-            <p style="margin-top: 0;">O <strong>Ratio</strong> é uma plataforma avançada de pesquisa jurisprudencial
-              construída com Inteligência Artificial, projetada para rodar localmente no seu computador pessoal.</p>
 
-            <p>Diferente de chats comuns que "adivinham" respostas, o Ratio opera sob um princípio rigoroso de
-              <strong>Anti-Alucinação</strong>: ele não acessa a internet livre para responder.
-            </p>
-
-            <ul style="margin: 12px 0 16px 20px; padding: 0;">
-              <li style="margin-bottom: 8px;"><strong>Base de Dados Fixa:</strong> Consulta exclusivamente o acervo
-                interno contendo mais de <strong>1.1 milhão de documentos processados</strong>.</li>
-              <li style="margin-bottom: 8px;"><strong>Fluxo RAG:</strong> Identifica passagens específicas no acervo e
-                fundamenta a resposta gerando um <strong>Dossiê Documental</strong> anexo a cada pesquisa.</li>
-              <li style="margin-bottom: 8px;"><strong>Operação Local:</strong> Os arquivos e bancos vetoriais ficam no
-                seu disco (Offline). Apenas a escrita final passa pelo modelo selecionado.</li>
-              <li style="margin-bottom: 0;"><strong>Código Aberto:</strong> O Ratio é distribuído gratuitamente
-                (Open-Source), garantindo transparência técnica à comunidade jurídica.</li>
-            </ul>
-
-            <p style="margin-bottom: 0;">Para conhecer a lista completa de funcionalidades (Níveis de Força Normativa,
-              Ferramentas de Áudio, Filtros Judiciais), consulte a documentação oficial ou o GitHub do projeto.</p>
+          <!-- Scene: Generate -->
+          <div class="scene" id="scene-gen">
+            <div class="gen-sources" id="genSrcs"></div>
+            <div class="gen-label">Gerando resposta</div>
+            <div class="gen-box" id="genBox"></div>
           </div>
-        </section>
 
-        <section id="downloads" class="panel-shell">
-          <div class="panel-head">
-            <h2>Downloads</h2>
-          </div>
-          <p style="padding: 12px; font-size: 13px; color: #44403c">
-            Use as opções abaixo para baixar o Ratio pre-configurado para seu ambiente.
-            A release atualizada contém as últimas correções e uma interface embutida.
-          </p>
-          <div id="downloadsList" class="downloads-list" style="padding: 0 12px 16px 12px;"></div>
-        </section>
-      </section>
-
-      <aside id="apoio" class="evidence-panel panel-shell">
-        <h2>Apoio ao Projeto</h2>
-        <p class="panel-note">
-          Se o Ratio for útil no seu fluxo de pesquisa, considere fazer uma doação para manter o projeto vivo e auxiliar
-          nos gastos com desenvolvimento.
-        </p>
-
-        <div style="margin-top: 14px; display: grid; gap: 10px;">
-          <div class="download-card" style="text-align: center;">
-            <h3 class="download-title">Doação via PIX</h3>
-            <p class="download-meta">QR Code</p>
-            <img src="./apoio-pix.jpeg" alt="QR Code PIX"
-              style="max-width: 100%; border-radius: 4px; margin-top: 8px;" />
-
-            <div style="margin-top: 12px;">
-              <button onclick="copyPix()"
-                style="width: 100%; cursor: pointer; background: var(--stone-900); color: var(--stone-50); border: none; border-radius: 4px; padding: 8px; font-family: var(--mono); font-size: 11px; text-transform: uppercase; font-weight: 600; display: flex; justify-content: center; align-items: center; gap: 6px;">
-                <svg style="width:14px;height:14px;" viewBox="0 0 16 16" fill="currentColor">
-                  <path
-                    d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
-                  </path>
-                  <path
-                    d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
-                  </path>
-                </svg>
-                <span id="pixCopyText">Copiar Chave PIX</span>
-              </button>
-              <!-- Substitua o value="suachavepix" pela chave PIX real no input abaixo -->
-              <input type="text" id="pixKeyInput" value="suachaveaqui@email.com"
-                style="position: absolute; left: -9999px;" aria-hidden="true" tabindex="-1" />
+          <!-- Scene: Answer -->
+          <div class="scene" id="scene-ans">
+            <div class="ans-header">
+              <div class="ans-badge">✓ Concluído</div>
+              <div class="ans-pills">
+                <div class="ans-pill">RE 573202</div>
+                <div class="ans-pill">STF / STJ</div>
+              </div>
+            </div>
+            <div class="ans-text">
+              A jurisprudência dominante do <b>STF</b> (RE 573202) firmou que contratos temporários com a
+              <b>Administração Pública</b> são regidos pelo <em>regime jurídico-administrativo</em>, sendo competente a
+              <b>Justiça Comum Estadual</b> — e não a Justiça do Trabalho — para dirimir os litígios decorrentes dessas
+              relações.
             </div>
           </div>
         </div>
 
-        <div class="panel-foot">
-          <p>Dúvidas de instalação: consulte o README oficial do projeto.</p>
-          <a class="source-link" href="https://github.com/carlosvictorodrigues" target="_blank"
-            rel="noopener noreferrer">Perfil no GitHub</a>
+        <!-- Tracker -->
+        <div class="tracker">
+          <div class="t-steps" id="tSteps"></div>
+          <div class="t-meta">
+            <span id="tStatus">aguardando…</span>
+            <span id="tTime">0.0s</span>
+          </div>
         </div>
-      </aside>
-    </section>
-  </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats bar -->
+  <div class="statsbar">
+    <div class="statsbar-inner">
+      <div class="stat">
+        <span class="stat-num">1,1M+</span>
+        <span class="stat-label">documentos no acervo</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">operação offline</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <span class="stat-num">STF · STJ</span>
+        <span class="stat-label">fontes primárias</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <span class="stat-num">Open-Source</span>
+        <span class="stat-label">código aberto e gratuito</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sobre -->
+  <section class="section" id="sobre">
+    <div class="section-inner section-two-col">
+      <div class="section-text">
+        <p class="section-eyebrow">O problema</p>
+        <h2 class="section-title">IAs que inventam jurisprudência são um risco.</h2>
+        <p class="section-body">
+          Ferramentas genéricas de IA "alucinam" — inventam números de processos, datas e ementas que nunca existiram.
+          Para o direito, isso é catastrófico.
+        </p>
+        <p class="section-body">
+          O Ratio foi construído com um princípio central de <strong>anti-alucinação</strong>: ele jamais acessa a
+          internet livre para responder. Toda resposta é gerada exclusivamente a partir do acervo interno verificado.
+        </p>
+        <div class="feature-row">
+          <div class="feature-item">
+            <span class="feature-icon">◈</span>
+            <div>
+              <strong>Base fixa e verificada</strong>
+              <p>Mais de 1,1 milhão de documentos processados do acervo jurisprudencial brasileiro.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">◈</span>
+            <div>
+              <strong>Fluxo RAG com dossiê</strong>
+              <p>Cada pesquisa gera um Dossiê Documental com os documentos-fonte usados na resposta.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">◈</span>
+            <div>
+              <strong>Sem rastro, sem nuvem</strong>
+              <p>Os arquivos e bancos vetoriais ficam no seu disco. Privacidade total.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-aside">
+        <div class="card-dark">
+          <p class="card-dark-label">FLUXO DE PESQUISA</p>
+          <div class="flow-steps">
+            <div class="flow-step">
+              <span class="flow-num">01</span>
+              <div>
+                <strong>Consulta em linguagem natural</strong>
+                <p>Escreva sua pergunta jurídica como faria com um pesquisador.</p>
+              </div>
+            </div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">
+              <span class="flow-num">02</span>
+              <div>
+                <strong>Busca vetorial no acervo local</strong>
+                <p>O Ratio encontra até 120 candidatos híbridos no acervo offline.</p>
+              </div>
+            </div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">
+              <span class="flow-num">03</span>
+              <div>
+                <strong>Reranking e seleção final</strong>
+                <p>Os documentos mais relevantes são selecionados e ranqueados por score.</p>
+              </div>
+            </div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">
+              <span class="flow-num">04</span>
+              <div>
+                <strong>Síntese com Dossiê Documental</strong>
+                <p>A IA gera a síntese fundamentada, com referências aos documentos-fonte.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Funcionalidades -->
+  <section class="section section-dark" id="funcionalidades">
+    <div class="section-inner">
+      <p class="section-eyebrow light">Funcionalidades</p>
+      <h2 class="section-title light">Tudo que você precisa para pesquisar com rigor.</h2>
+      <div class="features-grid">
+        <div class="feat-card">
+          <div class="feat-icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </div>
+          <h3>Pesquisa Jurisprudencial</h3>
+          <p>Consulta semântica em mais de 1,1 milhão de documentos do STF e STJ. Resultados em segundos.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+          </div>
+          <h3>Dossiê Documental</h3>
+          <p>Cada resposta gera automaticamente um dossiê com os documentos-fonte referenciados e seus scores de
+            relevância.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </div>
+          <h3>Níveis de Força Normativa</h3>
+          <p>Documentos classificados em Nível A (Vinculante forte), Nível B (Precedente qualificado) e demais
+            categorias.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9" />
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+            </svg>
+          </div>
+          <h3>Distinguishing e Teses</h3>
+          <p>Formule novas teses, faça distinguishing de precedentes e peça resumos estruturados diretamente no chat.
+          </p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+              <path
+                d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+            </svg>
+          </div>
+          <h3>Leitura em Voz Alta</h3>
+          <p>Sínteses lidas em voz alta com TTS neural em português (PT-BR-NEURAL-2-B), com controle de velocidade e
+            pitch.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+          </div>
+          <h3>100% Local</h3>
+          <p>Roda inteiramente no seu computador. Os dados nunca saem da sua máquina. Compatível com Windows x64.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Downloads -->
+  <section class="section" id="downloads">
+    <div class="section-inner">
+      <p class="section-eyebrow">Download</p>
+      <h2 class="section-title">Instale o Ratio no seu computador.</h2>
+      <p class="section-sub">A release mais recente contém as últimas correções, a interface completa e a base de dados
+        pré-configurada.</p>
+      <div class="downloads-grid" id="downloadsList"></div>
+      <div class="install-note">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="12" />
+          <line x1="12" y1="16" x2="12.01" y2="16" />
+        </svg>
+        <span>Acesse o link do Google Drive, baixe o arquivo ZIP completo, descompacte na sua máquina e inicie pelo
+          <code>Ratio.exe</code>.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apoio -->
+  <section class="section section-apoio" id="apoio">
+    <div class="section-inner section-two-col-narrow">
+      <div class="section-text">
+        <p class="section-eyebrow">Apoio</p>
+        <h2 class="section-title">Ajude a manter o projeto vivo.</h2>
+        <p class="section-body">
+          O Ratio é desenvolvido e mantido de forma independente, como software livre e gratuito, voltado para
+          estudantes de direito, advogados, concurseiros e todos os operadores do meio jurídico brasileiro.
+        </p>
+        <p class="section-body">
+          Se ele for útil no seu dia a dia de pesquisa, considere uma doação via PIX. Qualquer valor ajuda a cobrir os
+          custos de desenvolvimento e infraestrutura.
+        </p>
+        <div class="apoio-links">
+          <a href="https://github.com/carlosvictorodrigues/ratio" target="_blank" rel="noopener"
+            class="btn btn-outline">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+            </svg>
+            GitHub do Projeto
+          </a>
+        </div>
+      </div>
+      <div class="pix-card">
+        <p class="pix-label">PIX</p>
+        <img src="./apoio-pix.jpeg" alt="QR Code PIX para doação" class="pix-qr" />
+        <button class="pix-btn" onclick="copyPix()">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor">
+            <path
+              d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z" />
+            <path
+              d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z" />
+          </svg>
+          <span id="pixCopyText">Copiar Chave PIX</span>
+        </button>
+        <input type="text" id="pixKeyInput"
+          value="00020126920014BR.GOV.BCB.PIX013607cdc77f-cd4b-44b8-a910-a254f58642f40230Apoie o Ratio - Jurisprudência5204000053039865802BR5925Carlos Victor de Oliveira6009SAO PAULO621405102qCvdJp89F6304E670"
+          aria-hidden="true" tabindex="-1" style="position:absolute;left:-9999px;" />
+        <p class="pix-note">Qualquer valor é bem-vindo e faz diferença.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="./logotipo.png" alt="Ratio" class="footer-logo" />
+        <span>RATIO · Pesquisa Jurisprudencial</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/carlosvictorodrigues/ratio" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/carlosvictorodrigues/ratio/blob/main/LICENSE" target="_blank"
+          rel="noopener">Licença</a>
+        <a href="https://github.com/carlosvictorodrigues/ratio#readme" target="_blank" rel="noopener">Documentação</a>
+      </div>
+      <p class="footer-copy">ratiojuris.me · Open-Source · Free</p>
+    </div>
+  </footer>
 
   <script src="./app.js"></script>
+  <script src="./rag-animation.js"></script>
 </body>
 
 </html>

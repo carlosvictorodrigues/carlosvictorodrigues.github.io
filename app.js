@@ -5,7 +5,7 @@ const downloads = [
     version: "v2026.02.25",
     size: "Completo",
     notes: "Baixe o arquivo ZIP completo pelo link do Google Drive fornecido, descompacte na sua máquina e inicie pelo Ratio.exe.",
-    primaryUrl: "https://drive.google.com/file/d/1_srFMipyeVOxv595yMHcjfI01RoVbzem/view?usp=sharing",
+    primaryUrl: "https://drive.google.com/file/d/1totax2FylEsqBwM9JqgswIbI2bpj6m-U/view?usp=sharing",
     primaryLabel: "↓ Baixar no Google Drive",
     secondaryUrl: "https://github.com/carlosvictorodrigues/ratio",
     secondaryLabel: "Repositório"
@@ -100,3 +100,4 @@ if (statsbar) {
 }
 
 renderDownloads();
+

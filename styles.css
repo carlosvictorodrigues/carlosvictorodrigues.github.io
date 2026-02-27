@@ -930,11 +930,11 @@ strong {
 .footer-contact {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: none;
   color: var(--stone-mid);
 }
 
@@ -943,10 +943,11 @@ strong {
 }
 
 .footer-contact-link {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   color: var(--muted);
   text-decoration: none;
-  letter-spacing: 0.04em;
-  text-transform: none;
   transition: color .15s;
 }
 

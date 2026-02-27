@@ -18,3 +18,14 @@ def test_hero_glow_intensity_is_strengthened():
     hero_glow = css.split(".hero-glow", 1)[1].split(".hero-eyebrow", 1)[0]
 
     assert "rgba(255, 255, 255, 0.12)" in hero_glow
+
+
+def test_footer_contact_uses_same_typography_family_as_footer_links():
+    css = _read("styles.css")
+    footer_contact = css.split(".footer-contact", 1)[1].split(".footer-copy", 1)[0]
+
+    assert "font-family: var(--font-body);" in footer_contact
+    assert "font-size: 12px;" in footer_contact
+    assert "text-transform: none;" in footer_contact
+    assert "font-family: inherit;" in footer_contact
+    assert "font-size: inherit;" in footer_contact

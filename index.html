@@ -384,19 +384,29 @@
       <p class="section-sub">Seção dedicada para separar o que já está em produção do que ainda está em validação local antes da publicação.</p>
       <div class="updates-grid">
         <div class="patch-notes">
-          <p class="patch-notes-title">Próxima versão (pendente de publicação)</p>
+          <p class="patch-notes-title">Versão local: implementação de Personas (ainda não publicada)</p>
           <ul class="patch-notes-list">
-            <li>O modo padrão de TTS foi alterado para o legado do Google, priorizando estabilidade e menor tempo de geração.</li>
-            <li>Novo seletor no Ratio para escolher entre <code>TTS Clássico (Google)</code> e <code>TTS Moderno (Gemini)</code>.</li>
-            <li>A escolha de voz feita pelo usuário passa a valer na próxima resposta em áudio.</li>
-            <li>Foi adicionado fallback do reranqueador local com o modelo <code>cross-encoder/mmarco-mMiniLMv2-L12-H384-v1</code>, mantendo robustez quando o modelo principal estiver indisponível.</li>
+            <li>Novo sistema de <strong>Personas de Resposta</strong>: 4 modos que adaptam o estilo da resposta ao objetivo do usuário — <code>Visão Geral</code> (padrão), <code>Parecer Jurídico</code> (advogados), <code>Estudos</code> (concurseiros) e <code>Petição</code> (peças processuais).</li>
+            <li>Campo de <strong>instrução livre</strong> no compositor de perguntas, permitindo diretivas personalizadas como "Compare STF vs STJ" ou "Responda em no máximo 3 frases".</li>
+            <li>Novo <strong>popover de dicas de prompt</strong> com exemplos práticos de como formular boas perguntas jurídicas.</li>
+            <li>Chip indicador de modo ativo no cabeçalho da interface, com alternância rápida entre personas.</li>
+            <li>Hardening de segurança nos filtros de busca (sanitização de entrada, escape em <code>LIKE</code> e validações de tamanho/padrão) para reduzir risco de injeção em filtros SQL do LanceDB.</li>
+            <li>Mitigação de XSS por URL externa no frontend: links e aberturas de documentos agora aceitam somente protocolos <code>http:</code> e <code>https:</code>.</li>
+            <li>Upload de PDF no Meu Acervo com validação de assinatura real do arquivo (<code>%PDF-</code>), rejeitando arquivos renomeados indevidamente.</li>
+            <li>Remoção de exposição de caminho absoluto (<code>env_path</code>) nas rotas de configuração da API.</li>
+            <li>TTS legado com chave em header HTTP (<code>X-Goog-Api-Key</code>) em vez de query string na URL.</li>
+            <li>CDNs do frontend com versões pinadas + SRI e <code>crossorigin</code> para reduzir risco de supply-chain.</li>
+            <li>Melhorias de robustez de API: mensagens públicas de erro mais seguras, log técnico no backend e rate limiting local em endpoints críticos.</li>
+            <li>Mitigação de prompt injection no pipeline RAG com delimitação explícita de blocos de entrada e regra de ignorar comandos embutidos no conteúdo do usuário/documentos.</li>
           </ul>
         </div>
         <div class="patch-notes">
           <p class="patch-notes-title">Produção atual no site · v2026.03.02</p>
           <ul class="patch-notes-list">
-            <li>Este é o estado efetivamente publicado em <code>ratiojuris.me</code> hoje.</li>
-            <li>As mudanças de TTS acima ainda não foram publicadas em produção.</li>
+            <li>O modo padrão de TTS foi alterado para o legado do Google, priorizando estabilidade e menor tempo de geração.</li>
+            <li>Novo seletor no Ratio para escolher entre <code>TTS Clássico (Google)</code> e <code>TTS Moderno (Gemini)</code>.</li>
+            <li>A escolha de voz feita pelo usuário passa a valer na próxima resposta em áudio.</li>
+            <li>Foi adicionado fallback do reranqueador local com o modelo <code>cross-encoder/mmarco-mMiniLMv2-L12-H384-v1</code>, mantendo robustez quando o modelo principal estiver indisponível.</li>
           </ul>
         </div>
       </div>

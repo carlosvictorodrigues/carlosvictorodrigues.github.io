@@ -2,7 +2,7 @@ const downloads = [
   {
     channel: "Estável",
     platform: "Windows x64",
-    version: "v2026.02.27",
+    version: "v2026.03.02",
     size: "Completo",
     notes: "Baixe o arquivo ZIP completo pelo link do Google Drive fornecido, descompacte na sua máquina e inicie pelo Ratio.exe.",
     primaryUrl: "https://drive.google.com/file/d/1fHNvcpugTT9b2y2C1F193HefmxhO9hmM/view?usp=sharing",

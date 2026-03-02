@@ -37,6 +37,7 @@
         <a href="#sobre" class="nav-link">Sobre</a>
         <a href="#funcionalidades" class="nav-link">Funcionalidades</a>
         <a href="#downloads" class="nav-link">Download</a>
+        <a href="#atualizacoes" class="nav-link">Atualizacoes</a>
         <a href="#apoio" class="nav-link">Apoio</a>
         <a href="https://github.com/carlosvictorodrigues/ratio" target="_blank" rel="noopener"
           class="nav-link nav-link-gh">
@@ -333,8 +334,8 @@
             </svg>
           </div>
           <h3>Leitura em Voz Alta</h3>
-          <p>Sínteses lidas em voz alta com TTS neural em português (PT-BR-NEURAL-2-B), com controle de velocidade e
-            pitch.</p>
+          <p>Sinteses em audio com seletor de modo de voz: TTS classico (mais estavel) ou TTS moderno Gemini
+            (experimental), com controle de velocidade e pitch.</p>
         </div>
         <div class="feat-card">
           <div class="feat-icon-wrap">
@@ -372,13 +373,32 @@
           descompacte na sua máquina e inicie pelo
           <code>Ratio.exe</code>.</span>
       </div>
-      <div class="patch-notes">
-        <p class="patch-notes-title">Patch notes · v2026.03.02</p>
-        <ul class="patch-notes-list">
-          <li>TTS atualizado para Gemini nativo moderno com modelo <code>gemini-2.5-flash-preview-tts</code> e voz <code>Charon</code>.</li>
-          <li>Leitura em voz alta com blocos SSML maiores (ate 5000 chars) para reduzir cortes e manter fluidez.</li>
-          <li>Melhorias de estabilidade no stream de audio e no fallback de sintese.</li>
-        </ul>
+    </div>
+  </section>
+
+  <!-- Atualizacoes -->
+  <section class="section section-dark" id="atualizacoes">
+    <div class="section-inner">
+      <p class="section-eyebrow light">Atualizacoes</p>
+      <h2 class="section-title light">Status de release e patch notes.</h2>
+      <p class="section-sub">Secao dedicada para separar o que ja esta em producao do que ainda esta em validacao local antes do deploy.</p>
+      <div class="updates-grid">
+        <div class="patch-notes">
+          <p class="patch-notes-title">Proxima release (pendente de deploy)</p>
+          <ul class="patch-notes-list">
+            <li>O modo padrao de TTS foi alterado para o legado do Google por estabilidade e menor tempo de geracao.</li>
+            <li>Novo seletor no Ratio para escolha entre <code>TTS Classico (Google)</code> e <code>TTS Moderno (Gemini)</code>.</li>
+            <li>A escolha de voz feita pelo usuario passa a valer na proxima resposta em audio.</li>
+            <li>Inserido fallback do reranker local com o modelo <code>cross-encoder/mmarco-mMiniLMv2-L12-H384-v1</code> para manter robustez quando o modelo principal indisponibilizar.</li>
+          </ul>
+        </div>
+        <div class="patch-notes">
+          <p class="patch-notes-title">Producao atual no site · v2026.03.02</p>
+          <ul class="patch-notes-list">
+            <li>Este e o estado efetivamente publicado em <code>ratiojuris.me</code> hoje.</li>
+            <li>As mudancas de TTS acima ainda nao foram publicadas em producao.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>

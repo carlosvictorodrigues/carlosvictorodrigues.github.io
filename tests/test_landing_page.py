@@ -29,3 +29,21 @@ def test_footer_contact_uses_same_typography_family_as_footer_links():
     assert "text-transform: none;" in footer_contact
     assert "font-family: inherit;" in footer_contact
     assert "font-size: inherit;" in footer_contact
+
+
+def test_updates_section_prioritizes_current_release_and_collapsible_history():
+    html = _read("index.html")
+    updates = html.split('id="atualizacoes"', 1)[1].split("</section>", 1)[0]
+
+    assert 'class="updates-current"' in updates
+    assert "Versao atual" in updates
+    assert 'class="update-chip"' in updates
+    assert '<details class="update-history-item"' in updates
+
+
+def test_updates_section_has_spotlight_and_history_styles():
+    css = _read("styles.css")
+    assert ".updates-current {" in css
+    assert ".update-chip {" in css
+    assert ".update-history-item {" in css
+    assert ".update-history-item summary" in css

@@ -807,14 +807,6 @@ strong {
   color: var(--cream);
 }
 
-.patch-notes {
-  margin-top: 12px;
-  padding: 14px 16px;
-  background: rgba(232, 184, 109, 0.07);
-  border: 1px solid rgba(232, 184, 109, 0.28);
-  border-radius: 6px;
-}
-
 .patch-notes-title {
   margin: 0 0 8px 0;
   font-family: var(--font-mono);
@@ -845,11 +837,93 @@ strong {
 
 .updates-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: 1fr;
+  gap: 14px;
 }
 
-.updates-grid .patch-notes {
+.updates-current {
+  padding: 18px 18px 16px;
+  background: linear-gradient(180deg, rgba(232, 184, 109, 0.12) 0%, rgba(232, 184, 109, 0.06) 100%);
+  border: 1px solid rgba(232, 184, 109, 0.4);
+  border-radius: 8px;
+}
+
+.updates-current-title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.28;
+  color: var(--cream);
+}
+
+.updates-current-sub {
+  margin: 6px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--warm-gray);
+}
+
+.updates-current-chips {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.update-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.updates-current .patch-notes-list {
+  margin-top: 12px;
+}
+
+.updates-history {
+  display: grid;
+  gap: 10px;
+}
+
+.update-history-item {
+  margin: 0;
+  border: 1px solid rgba(232, 184, 109, 0.24);
+  border-radius: 8px;
+  background: rgba(232, 184, 109, 0.05);
+  overflow: hidden;
+}
+
+.update-history-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 13px 16px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.update-history-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.update-history-item[open] summary {
+  border-bottom: 1px solid rgba(232, 184, 109, 0.18);
+}
+
+.update-history-body {
+  padding: 12px 16px 14px;
+}
+
+.update-history-body .patch-notes-list {
   margin-top: 0;
 }
 

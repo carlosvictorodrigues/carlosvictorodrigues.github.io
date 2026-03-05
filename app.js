@@ -1,23 +1,23 @@
 ﻿const downloads = [
   {
-    channel: "EstÃ¡vel",
+    channel: "Estável",
     platform: "Windows x64",
     version: "v2026.03.05",
     size: "Completo",
-    notes: "Nova versao com atualizacao automatica STF/STJ, deduplicacao de documentos e indicador de ultima verificacao no painel.",
+    notes: "Nova versão com atualização automática STF/STJ, deduplicação de documentos e indicador de última verificação no painel.",
     primaryUrl: "https://drive.google.com/file/d/1mQ6wwpNA2J_iRd7rfBscR062MWijR02-/view?usp=sharing",
-    primaryLabel: "â†“ Baixar no Google Drive",
+    primaryLabel: "↓ Baixar no Google Drive",
     secondaryUrl: "https://github.com/carlosvictorodrigues/ratio",
-    secondaryLabel: "RepositÃ³rio"
+    secondaryLabel: "Repositório"
   },
   {
-    channel: "DocumentaÃ§Ã£o",
-    platform: "Guia de uso & CÃ³digo-fonte",
+    channel: "Documentação",
+    platform: "Guia de uso & Código-fonte",
     version: "Atual",
     size: "online",
-    notes: "Acesse o repositÃ³rio principal no GitHub para a documentaÃ§Ã£o completa, README e cÃ³digo-fonte.",
+    notes: "Acesse o repositório principal no GitHub para a documentação completa, README e código-fonte.",
     primaryUrl: "https://github.com/carlosvictorodrigues/ratio#readme",
-    primaryLabel: "â†— Ver DocumentaÃ§Ã£o",
+    primaryLabel: "↗ Ver Documentação",
     secondaryUrl: "https://github.com/carlosvictorodrigues/ratio",
     secondaryLabel: "GitHub"
   }
@@ -34,7 +34,7 @@ function renderDownloads() {
         <div class="dl-title">${item.platform}</div>
         <span class="dl-badge">${item.channel}</span>
       </div>
-      <p class="dl-meta">${item.version} Â· ${item.size}</p>
+      <p class="dl-meta">${item.version} · ${item.size}</p>
       <p class="dl-notes">${item.notes}</p>
       <div class="dl-actions">
         <a class="dl-btn-primary" href="${item.primaryUrl}" target="_blank" rel="noopener noreferrer">${item.primaryLabel}</a>

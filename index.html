@@ -384,6 +384,18 @@
       <p class="section-sub">Seção dedicada ao histórico consolidado da versão publicada no site.</p>
       <div class="updates-grid">
         <div class="patch-notes">
+          <p class="patch-notes-title">Patch notes · v2026.03.05 (Atualizacao automatica da base oficial)</p>
+          <ul class="patch-notes-list">
+            <li>Novo fluxo de <strong>atualizacao automatica STF/STJ</strong> no app, executado em segundo plano a partir do botao de atualizacao.</li>
+            <li>Pipeline oficial completo com coleta, tratamento dos dados e gravacao no banco vetorial com checagens de integridade.</li>
+            <li>Atualizacao <strong>incremental</strong> para 2026+, com cursor da ultima data verificada no STF para evitar reprocessamento desnecessario.</li>
+            <li>Deduplicacao reforcada por <code>doc_id</code> e filtros de existencia antes do upsert para nao duplicar jurisprudencia ja indexada.</li>
+            <li>Painel de status agora exibe <strong>ultima verificacao</strong> e ate qual data STF/STJ foi atualizado.</li>
+            <li>Durante a etapa STF, o sistema pode abrir uma nova janela do Chrome para validacao do portal oficial.</li>
+            <li>Coleta STJ mantida com metadados ricos (marcacoes, orgao julgador, relator, datas e link para inteiro teor/PDF do informativo).</li>
+          </ul>
+        </div>
+        <div class="patch-notes">
           <p class="patch-notes-title">Patch notes · v2026.03.02 (Personas e Segurança)</p>
           <ul class="patch-notes-list">
             <li>Novo sistema de <strong>Personas de Resposta</strong>: 4 modos que adaptam o estilo da resposta ao objetivo do usuário — <code>Visão Geral</code> (padrão), <code>Parecer Jurídico</code> (advogados), <code>Estudos</code> (concurseiros) e <code>Petição</code> (peças processuais).</li>

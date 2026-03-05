@@ -1,23 +1,23 @@
-const downloads = [
+﻿const downloads = [
   {
-    channel: "Estável",
+    channel: "EstÃ¡vel",
     platform: "Windows x64",
-    version: "v2026.03.02",
+    version: "v2026.03.05",
     size: "Completo",
-    notes: "Baixe o arquivo ZIP completo pelo link do Google Drive fornecido, descompacte na sua máquina e inicie pelo Ratio.exe.",
+    notes: "Nova versao com atualizacao automatica STF/STJ, deduplicacao de documentos e indicador de ultima verificacao no painel.",
     primaryUrl: "https://drive.google.com/file/d/1mQ6wwpNA2J_iRd7rfBscR062MWijR02-/view?usp=sharing",
-    primaryLabel: "↓ Baixar no Google Drive",
+    primaryLabel: "â†“ Baixar no Google Drive",
     secondaryUrl: "https://github.com/carlosvictorodrigues/ratio",
-    secondaryLabel: "Repositório"
+    secondaryLabel: "RepositÃ³rio"
   },
   {
-    channel: "Documentação",
-    platform: "Guia de uso & Código-fonte",
+    channel: "DocumentaÃ§Ã£o",
+    platform: "Guia de uso & CÃ³digo-fonte",
     version: "Atual",
     size: "online",
-    notes: "Acesse o repositório principal no GitHub para a documentação completa, README e código-fonte.",
+    notes: "Acesse o repositÃ³rio principal no GitHub para a documentaÃ§Ã£o completa, README e cÃ³digo-fonte.",
     primaryUrl: "https://github.com/carlosvictorodrigues/ratio#readme",
-    primaryLabel: "↗ Ver Documentação",
+    primaryLabel: "â†— Ver DocumentaÃ§Ã£o",
     secondaryUrl: "https://github.com/carlosvictorodrigues/ratio",
     secondaryLabel: "GitHub"
   }
@@ -34,7 +34,7 @@ function renderDownloads() {
         <div class="dl-title">${item.platform}</div>
         <span class="dl-badge">${item.channel}</span>
       </div>
-      <p class="dl-meta">${item.version} · ${item.size}</p>
+      <p class="dl-meta">${item.version} Â· ${item.size}</p>
       <p class="dl-notes">${item.notes}</p>
       <div class="dl-actions">
         <a class="dl-btn-primary" href="${item.primaryUrl}" target="_blank" rel="noopener noreferrer">${item.primaryLabel}</a>
@@ -100,4 +100,5 @@ if (statsbar) {
 }
 
 renderDownloads();
+
 

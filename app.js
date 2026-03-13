@@ -2,10 +2,10 @@
   {
     channel: "Estável",
     platform: "Windows x64",
-    version: "v2026.03.05",
+    version: "v2026.03.12",
     size: "Completo",
-    notes: "Nova versão com atualização automática STF/STJ, deduplicação de documentos e indicador de última verificação no painel.",
-    primaryUrl: "https://drive.google.com/file/d/1mQ6wwpNA2J_iRd7rfBscR062MWijR02-/view?usp=sharing",
+    notes: "Portal jurídico com sugestões de pesquisa, feed de atualizações, alertas por tema, cores por tribunal e compatibilidade automática com qualquer computador.",
+    primaryUrl: "https://drive.google.com/file/d/1Ue_LLUIfg-GzVqCkRgllvJhJoIqUOCO0/view?usp=sharing",
     primaryLabel: "↓ Baixar no Google Drive",
     secondaryUrl: "https://github.com/carlosvictorodrigues/ratio",
     secondaryLabel: "Repositório"

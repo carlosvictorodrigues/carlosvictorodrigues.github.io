@@ -85,7 +85,7 @@
           Ver no GitHub →
         </a>
       </div>
-      <p class="hero-version">v2026.03.02 · Windows x64 · 100% Gratuito</p>
+      <p class="hero-version">v2026.03.12 · Windows x64 · 100% Gratuito</p>
     </div>
     <div class="hero-visual">
       <div class="app">
@@ -384,24 +384,38 @@
       <p class="section-sub">Seção dedicada ao histórico consolidado da versão publicada no site.</p>
       <div class="updates-grid">
         <div class="updates-current">
-          <p class="patch-notes-title">Versao atual · v2026.03.05</p>
-          <h3 class="updates-current-title">Atualizacao automatica da base oficial (STF/STJ)</h3>
-          <p class="updates-current-sub">Atualizacao automatica com coleta incremental, deduplicacao e indicador de ultima verificacao.</p>
+          <p class="patch-notes-title">Versao atual · v2026.03.12</p>
+          <h3 class="updates-current-title">Portal Juridico: experiencia repensada para o dia a dia do advogado</h3>
+          <p class="updates-current-sub">Novas funcionalidades que transformam o Ratio em um verdadeiro portal de atualizacao juridica, com interface mais acessivel e intuitiva.</p>
           <div class="updates-current-chips">
             <span class="update-chip">Estavel</span>
             <span class="update-chip">Windows x64</span>
-            <span class="update-chip">Atualizado em 05/03/2026</span>
+            <span class="update-chip">Atualizado em 12/03/2026</span>
           </div>
           <ul class="patch-notes-list">
-            <li>Novo fluxo de <strong>atualizacao automatica STF/STJ</strong> no app, executado em segundo plano a partir do botao de atualizacao.</li>
-            <li>Pipeline oficial completo com coleta, tratamento dos dados e gravacao no banco vetorial com checagens de integridade.</li>
-            <li>Atualizacao <strong>incremental</strong> para 2026+, com cursor da ultima data verificada no STF para evitar reprocessamento desnecessario.</li>
-            <li>Deduplicacao reforcada por <code>doc_id</code> e filtros de existencia antes do upsert para nao duplicar jurisprudencia ja indexada.</li>
-            <li>Painel de status agora exibe <strong>ultima verificacao</strong> e ate qual data STF/STJ foi atualizado.</li>
-            <li>Durante a etapa STF, o sistema pode abrir uma nova janela do Chrome para validacao do portal oficial.</li>
+            <li><strong>Compatibilidade automatica com qualquer computador</strong> — o Ratio agora detecta se a sua placa de video e compativel e ajusta sozinho, sem mensagens tecnicas. Funciona em qualquer maquina Windows.</li>
+            <li><strong>Cards coloridos por tribunal</strong> — documentos do STF e do STJ agora tem cores distintas no Dossie Documental, facilitando a identificacao visual imediata da origem de cada decisao.</li>
+            <li><strong>Sugestoes de pesquisa</strong> — ao abrir o Ratio, voce vera exemplos prontos de perguntas juridicas. Basta clicar em um exemplo para comecar a pesquisar, ideal para quem esta usando pela primeira vez.</li>
+            <li><strong>Dossie Documental mais visivel</strong> — o painel de documentos-fonte agora e mais destacado, com animacao de entrada e contagem atualizada, para que voce nunca perca de vista as evidencias da resposta.</li>
+            <li><strong>Guia de parametros em linguagem simples</strong> — nova aba de ajuda que explica cada opcao de busca sem termos tecnicos, com exemplos praticos de quando usar cada configuracao.</li>
+            <li><strong>Feed de atualizacoes jurisprudenciais</strong> — na tela inicial, um painel mostra as decisoes mais recentes do STF e STJ, com filtros por tribunal. O Ratio agora e tambem um portal de atualizacao juridica.</li>
+            <li><strong>Alertas por tema de interesse</strong> — salve os temas juridicos que voce acompanha e receba avisos automaticos quando houver novidades na jurisprudencia sobre esses assuntos.</li>
           </ul>
         </div>
         <div class="updates-history">
+          <details class="update-history-item">
+            <summary>Patch notes · v2026.03.05 (Atualizacao automatica STF/STJ)</summary>
+            <div class="update-history-body">
+              <ul class="patch-notes-list">
+                <li>Novo fluxo de <strong>atualizacao automatica STF/STJ</strong> no app, executado em segundo plano a partir do botao de atualizacao.</li>
+                <li>Pipeline oficial completo com coleta, tratamento dos dados e gravacao no banco vetorial com checagens de integridade.</li>
+                <li>Atualizacao <strong>incremental</strong> para 2026+, com cursor da ultima data verificada no STF para evitar reprocessamento desnecessario.</li>
+                <li>Deduplicacao reforcada e filtros de existencia antes da gravacao para nao duplicar jurisprudencia ja indexada.</li>
+                <li>Painel de status agora exibe <strong>ultima verificacao</strong> e ate qual data STF/STJ foi atualizado.</li>
+                <li>Durante a etapa STF, o sistema pode abrir uma nova janela do Chrome para validacao do portal oficial.</li>
+              </ul>
+            </div>
+          </details>
           <details class="update-history-item">
             <summary>Patch notes · v2026.03.02 (Personas e Seguranca)</summary>
             <div class="update-history-body">

@@ -2,10 +2,10 @@
   {
     channel: "Estável",
     platform: "Windows x64",
-    version: "v2026.03.12",
+    version: "v2026.03.16",
     size: "Completo",
-    notes: "Portal jurídico com sugestões de pesquisa, feed de atualizações, alertas por tema, cores por tribunal e compatibilidade automática com qualquer computador.",
-    primaryUrl: "https://drive.google.com/file/d/1Ue_LLUIfg-GzVqCkRgllvJhJoIqUOCO0/view?usp=sharing",
+    notes: "Novo Informativo Jurídico com teses extraídas, cobertura STF+STJ equilibrada, dados de março 2026 e correções no pipeline de atualização.",
+    primaryUrl: "https://drive.google.com/file/d/1ord-lZy4sCByOPEO4ceQ7zfGNBvmlI1u/view?usp=sharing",
     primaryLabel: "↓ Baixar no Google Drive",
     secondaryUrl: "https://github.com/carlosvictorodrigues/ratio",
     secondaryLabel: "Repositório"

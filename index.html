@@ -91,7 +91,7 @@
           Ver no GitHub →
         </a>
       </div>
-      <p class="hero-version">v2026.03.12 · Windows x64 · 100% Gratuito</p>
+      <p class="hero-version">v2026.03.16 · Windows x64 · 100% Gratuito</p>
     </div>
     <div class="hero-visual">
       <div class="app">
@@ -374,7 +374,7 @@
           <line x1="12" y1="8" x2="12" y2="12" />
           <line x1="12" y1="16" x2="12.01" y2="16" />
         </svg>
-        <span>Acesse o <a href="https://drive.google.com/file/d/1Ue_LLUIfg-GzVqCkRgllvJhJoIqUOCO0/view?usp=sharing"
+        <span>Acesse o <a href="https://drive.google.com/file/d/1ord-lZy4sCByOPEO4ceQ7zfGNBvmlI1u/view?usp=sharing"
             target="_blank" rel="noopener noreferrer">link do Google Drive</a>, baixe o arquivo ZIP completo,
           descompacte na sua máquina e inicie pelo
           <code>Ratio.exe</code>.</span>
@@ -390,25 +390,44 @@
       <p class="section-sub">Seção dedicada ao histórico consolidado da versão publicada no site.</p>
       <div class="updates-grid">
         <div class="updates-current">
-          <p class="patch-notes-title">Versao atual · v2026.03.12</p>
-          <h3 class="updates-current-title">Portal Juridico: experiencia repensada para o dia a dia do advogado</h3>
-          <p class="updates-current-sub">Novas funcionalidades que transformam o Ratio em um verdadeiro portal de atualizacao juridica, com interface mais acessivel e intuitiva.</p>
+          <p class="patch-notes-title">Versao atual · v2026.03.16</p>
+          <h3 class="updates-current-title">Informativo Juridico: saiba o que foi decidido, nao apenas que algo foi decidido</h3>
+          <p class="updates-current-sub">Nova secao dedicada que mostra o conteudo real das decisoes recentes de alta autoridade — sumulas vinculantes, teses fixadas e informativos — agrupadas por mes, com o texto da tese extraido automaticamente.</p>
           <div class="updates-current-chips">
             <span class="update-chip">Estavel</span>
             <span class="update-chip">Windows x64</span>
-            <span class="update-chip">Atualizado em 12/03/2026</span>
+            <span class="update-chip">Atualizado em 16/03/2026</span>
           </div>
           <ul class="patch-notes-list">
-            <li><strong>Compatibilidade automatica com qualquer computador</strong> — o Ratio agora detecta se a sua placa de video e compativel e ajusta sozinho, sem mensagens tecnicas. Funciona em qualquer maquina Windows.</li>
-            <li><strong>Cards coloridos por tribunal</strong> — documentos do STF e do STJ agora tem cores distintas no Dossie Documental, facilitando a identificacao visual imediata da origem de cada decisao.</li>
-            <li><strong>Sugestoes de pesquisa</strong> — ao abrir o Ratio, voce vera exemplos prontos de perguntas juridicas. Basta clicar em um exemplo para comecar a pesquisar, ideal para quem esta usando pela primeira vez.</li>
-            <li><strong>Dossie Documental mais visivel</strong> — o painel de documentos-fonte agora e mais destacado, com animacao de entrada e contagem atualizada, para que voce nunca perca de vista as evidencias da resposta.</li>
-            <li><strong>Guia de parametros em linguagem simples</strong> — nova aba de ajuda que explica cada opcao de busca sem termos tecnicos, com exemplos praticos de quando usar cada configuracao.</li>
-            <li><strong>Feed de atualizacoes jurisprudenciais</strong> — na tela inicial, um painel mostra as decisoes mais recentes do STF e STJ, com filtros por tribunal. O Ratio agora e tambem um portal de atualizacao juridica.</li>
-            <li><strong>Alertas por tema de interesse</strong> — salve os temas juridicos que voce acompanha e receba avisos automaticos quando houver novidades na jurisprudencia sobre esses assuntos.</li>
+            <li><strong>Informativo Juridico</strong> — nova secao no menu lateral que exibe as decisoes recentes mais importantes do STF e STJ, agrupadas por mes. Cada card mostra a tese ou ementa real extraida do documento, com data de julgamento e publicacao.</li>
+            <li><strong>Pesquisar mais sobre qualquer decisao</strong> — cada card do Informativo tem um botao que envia a decisao diretamente ao chat de pesquisa, para que voce possa aprofundar com o RAG em um clique.</li>
+            <li><strong>Cobertura equilibrada STF e STJ</strong> — o Informativo garante que decisoes de ambos os tribunais aparecam, mesmo quando um tribunal tem volume muito maior de dados.</li>
+            <li><strong>Dados de marco de 2026</strong> — decisoes do STJ de marco de 2026 (Informativo n. 880) agora presentes no acervo, incluindo temas como rescisao contratual, improbidade administrativa e honorarios advocaticios.</li>
+          </ul>
+          <p class="patch-notes-title" style="margin-top: 20px; font-size: 11px;">Correcoes de bugs</p>
+          <ul class="patch-notes-list">
+            <li><strong>Decisoes do STJ que nao apareciam</strong> — um erro fazia com que cerca de 40% das decisoes do STJ ficassem sem data no sistema, tornando-as invisiveis nas consultas. Todas as datas foram recuperadas e corrigidas.</li>
+            <li><strong>Datas em formato brasileiro agora reconhecidas</strong> — datas escritas como "3/3/2026" ou "9/12/2025" nao eram lidas corretamente pelo sistema. Agora todos os formatos de data usados pelo STF e STJ sao aceitos.</li>
+            <li><strong>Atualizacoes do STJ que travavam no meio do caminho</strong> — se a atualizacao do acervo fosse interrompida (por falta de internet, por exemplo), as decisoes ja baixadas ficavam presas e nao eram incluidas no acervo. Agora o Ratio detecta e inclui automaticamente essas decisoes pendentes na proxima atualizacao.</li>
+            <li><strong>Tela do Informativo carregava varias vezes seguidas</strong> — ao abrir o Informativo quando o acervo estava vazio, o sistema tentava recarregar repetidamente. Corrigido para carregar uma unica vez e respeitar o intervalo de atualizacao.</li>
+            <li><strong>Todas as datas sao reais</strong> — todas as datas exibidas no Informativo (julgamento e publicacao) vem diretamente dos portais oficiais do STF e STJ, com indicacao clara de qual tipo de data esta sendo mostrada.</li>
           </ul>
         </div>
         <div class="updates-history">
+          <details class="update-history-item">
+            <summary>Patch notes · v2026.03.12 (Portal Juridico)</summary>
+            <div class="update-history-body">
+              <ul class="patch-notes-list">
+                <li><strong>Compatibilidade automatica com qualquer computador</strong> — o Ratio agora detecta se a sua placa de video e compativel e ajusta sozinho, sem mensagens tecnicas.</li>
+                <li><strong>Cards coloridos por tribunal</strong> — documentos do STF e do STJ com cores distintas no Dossie Documental.</li>
+                <li><strong>Sugestoes de pesquisa</strong> — exemplos prontos de perguntas juridicas na tela inicial.</li>
+                <li><strong>Dossie Documental mais visivel</strong> — painel de documentos-fonte mais destacado, com animacao de entrada.</li>
+                <li><strong>Guia de parametros em linguagem simples</strong> — nova aba de ajuda sem termos tecnicos.</li>
+                <li><strong>Feed de atualizacoes jurisprudenciais</strong> — painel com decisoes recentes do STF e STJ na tela inicial.</li>
+                <li><strong>Alertas por tema de interesse</strong> — salve temas e receba avisos automaticos sobre novidades.</li>
+              </ul>
+            </div>
+          </details>
           <details class="update-history-item">
             <summary>Patch notes · v2026.03.05 (Atualizacao automatica STF/STJ)</summary>
             <div class="update-history-body">

@@ -5,7 +5,7 @@
     version: "v2026.03.16",
     size: "Completo",
     notes: "Novo Informativo Jurídico com teses extraídas, cobertura STF+STJ equilibrada, dados de março 2026 e correções no pipeline de atualização.",
-    primaryUrl: "https://drive.google.com/file/d/1ord-lZy4sCByOPEO4ceQ7zfGNBvmlI1u/view?usp=sharing",
+    primaryUrl: "https://drive.google.com/file/d/1fn-QdjXn5m2zbG6jhHgPHHIIRFmi3W2d/view?usp=sharing",
     primaryLabel: "↓ Baixar no Google Drive",
     secondaryUrl: "https://github.com/carlosvictorodrigues/ratio",
     secondaryLabel: "Repositório"

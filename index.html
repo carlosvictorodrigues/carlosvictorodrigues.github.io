@@ -389,30 +389,37 @@
       <p class="section-sub">Seção dedicada ao histórico consolidado da versão publicada no site.</p>
       <div class="updates-grid">
         <div class="updates-current">
-          <p class="patch-notes-title">Versao atual · v2026.03.16</p>
-          <h3 class="updates-current-title">Informativo Juridico: saiba o que foi decidido, nao apenas que algo foi decidido</h3>
-          <p class="updates-current-sub">Nova secao dedicada que mostra o conteudo real das decisoes recentes de alta autoridade — sumulas vinculantes, teses fixadas e informativos — agrupadas por mes, com o texto da tese extraido automaticamente.</p>
+          <p class="patch-notes-title">Versao atual · v2026.03.18</p>
+          <h3 class="updates-current-title">Instalador profissional e atualizacoes automaticas</h3>
+          <p class="updates-current-sub">O Ratio agora conta com um instalador Windows completo, com wizard de instalacao, e um sistema de atualizacoes delta que baixa apenas o que mudou — sem precisar reinstalar tudo.</p>
           <div class="updates-current-chips">
             <span class="update-chip">Estavel</span>
             <span class="update-chip">Windows x64</span>
-            <span class="update-chip">Atualizado em 16/03/2026</span>
+            <span class="update-chip">Atualizado em 18/03/2026</span>
           </div>
           <ul class="patch-notes-list">
-            <li><strong>Informativo Juridico</strong> — nova secao no menu lateral que exibe as decisoes recentes mais importantes do STF e STJ, agrupadas por mes. Cada card mostra a tese ou ementa real extraida do documento, com data de julgamento e publicacao.</li>
-            <li><strong>Pesquisar mais sobre qualquer decisao</strong> — cada card do Informativo tem um botao que envia a decisao diretamente ao chat de pesquisa, para que voce possa aprofundar com o RAG em um clique.</li>
-            <li><strong>Cobertura equilibrada STF e STJ</strong> — o Informativo garante que decisoes de ambos os tribunais aparecam, mesmo quando um tribunal tem volume muito maior de dados.</li>
-            <li><strong>Dados de marco de 2026</strong> — decisoes do STJ de marco de 2026 (Informativo n. 880) agora presentes no acervo, incluindo temas como rescisao contratual, improbidade administrativa e honorarios advocaticios.</li>
-          </ul>
-          <p class="patch-notes-title" style="margin-top: 20px; font-size: 11px;">Correcoes de bugs</p>
-          <ul class="patch-notes-list">
-            <li><strong>Decisoes do STJ que nao apareciam</strong> — um erro fazia com que cerca de 40% das decisoes do STJ ficassem sem data no sistema, tornando-as invisiveis nas consultas. Todas as datas foram recuperadas e corrigidas.</li>
-            <li><strong>Datas em formato brasileiro agora reconhecidas</strong> — datas escritas como "3/3/2026" ou "9/12/2025" nao eram lidas corretamente pelo sistema. Agora todos os formatos de data usados pelo STF e STJ sao aceitos.</li>
-            <li><strong>Atualizacoes do STJ que travavam no meio do caminho</strong> — se a atualizacao do acervo fosse interrompida (por falta de internet, por exemplo), as decisoes ja baixadas ficavam presas e nao eram incluidas no acervo. Agora o Ratio detecta e inclui automaticamente essas decisoes pendentes na proxima atualizacao.</li>
-            <li><strong>Tela do Informativo carregava varias vezes seguidas</strong> — ao abrir o Informativo quando o acervo estava vazio, o sistema tentava recarregar repetidamente. Corrigido para carregar uma unica vez e respeitar o intervalo de atualizacao.</li>
-            <li><strong>Todas as datas sao reais</strong> — todas as datas exibidas no Informativo (julgamento e publicacao) vem diretamente dos portais oficiais do STF e STJ, com indicacao clara de qual tipo de data esta sendo mostrada.</li>
+            <li><strong>Instalador Windows com wizard</strong> — instalador padrao com tela de boas-vindas, escolha de pasta, atalhos na Area de Trabalho e menu Iniciar. Nao exige permissao de administrador.</li>
+            <li><strong>Auto-update delta</strong> — ao atualizar, o Ratio baixa apenas os arquivos que mudaram (backend, frontend, RAG), sem re-baixar os 13 GB do banco de dados ou os 2 GB de cache de modelos.</li>
+            <li><strong>Reinicio automatico apos atualizacao</strong> — apos aplicar uma atualizacao, o Ratio oferece reiniciar automaticamente para usar a versao nova.</li>
+            <li><strong>Preservacao de dados em upgrades</strong> — o instalador preserva o banco LanceDB, cache de modelos, banco SQLite e arquivo .env nas atualizacoes.</li>
+            <li><strong>Scraper TJRS</strong> — novo script para baixar jurisprudencia do Tribunal de Justica do Rio Grande do Sul via Solr, com paginacao automatica e divisao recursiva de intervalos.</li>
+            <li><strong>Pipeline CI/CD</strong> — workflow do GitHub Actions para gerar manifestos de atualizacao e publicar releases automaticamente.</li>
           </ul>
         </div>
         <div class="updates-history">
+          <details class="update-history-item">
+            <summary>Patch notes · v2026.03.16 (Informativo Juridico)</summary>
+            <div class="update-history-body">
+              <ul class="patch-notes-list">
+                <li><strong>Informativo Juridico</strong> — nova secao no menu lateral que exibe as decisoes recentes mais importantes do STF e STJ, agrupadas por mes.</li>
+                <li><strong>Pesquisar mais sobre qualquer decisao</strong> — cada card do Informativo tem um botao que envia a decisao diretamente ao chat de pesquisa.</li>
+                <li><strong>Cobertura equilibrada STF e STJ</strong> — o Informativo garante que decisoes de ambos os tribunais aparecam.</li>
+                <li><strong>Dados de marco de 2026</strong> — decisoes do STJ de marco de 2026 (Informativo n. 880) agora presentes no acervo.</li>
+                <li><strong>Correcao de datas do STJ</strong> — cerca de 40% das decisoes do STJ estavam sem data. Todas foram recuperadas.</li>
+                <li><strong>Atualizacoes incrementais do STJ corrigidas</strong> — decisoes pendentes de atualizacoes interrompidas agora sao incluidas automaticamente.</li>
+              </ul>
+            </div>
+          </details>
           <details class="update-history-item">
             <summary>Patch notes · v2026.03.12 (Portal Juridico)</summary>
             <div class="update-history-body">

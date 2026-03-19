@@ -391,14 +391,15 @@
       <div class="updates-grid">
         <div class="updates-current">
           <p class="patch-notes-title">Versao atual · v2026.03.19</p>
-          <h3 class="updates-current-title">Multi-LLM, auto-update e foco em qualidade</h3>
-          <p class="updates-current-sub">O Ratio agora suporta Claude (Anthropic) como provedor alternativo de geracao de respostas, com recomendacoes de qualidade integradas. Alem disso, a partir desta versao, atualizacoes futuras serao aplicadas automaticamente — sem precisar baixar novamente.</p>
+          <h3 class="updates-current-title">Dark mode, multi-LLM, auto-update e foco em qualidade</h3>
+          <p class="updates-current-sub">O Ratio agora conta com modo escuro (paleta Warm Obsidian), suporte a Claude (Anthropic) como provedor alternativo de respostas e atualizacoes automaticas — sem precisar baixar novamente.</p>
           <div class="updates-current-chips">
             <span class="update-chip">Estavel</span>
             <span class="update-chip">Windows x64</span>
             <span class="update-chip">Atualizado em 19/03/2026</span>
           </div>
           <ul class="patch-notes-list">
+            <li><strong>Modo escuro (Warm Obsidian)</strong> — interface completa com tema escuro de tons quentes, ideal para leitura prolongada e telas OLED. Ative pelo icone de lua no painel lateral ou deixe o Ratio seguir a preferencia do seu sistema operacional.</li>
             <li><strong>Provedor de geracao selecionavel (Gemini / Claude)</strong> — nas configuracoes, voce pode escolher entre Gemini (padrao) e Claude (Anthropic) para gerar respostas. O Claude tende a produzir respostas com maior profundidade argumentativa e fidelidade ao sistema de regras em portugues juridico.</li>
             <li><strong>Chave Claude opcional</strong> — nova secao nas configuracoes para informar e validar sua chave Anthropic. Quem nao tem chave Claude continua usando Gemini normalmente.</li>
             <li><strong>Recomendacoes de qualidade</strong> — dicas integradas nas configuracoes indicam quais combinacoes de reranker e provedor entregam melhores resultados, com base em benchmarks reais.</li>
@@ -578,6 +579,15 @@
       <div class="announce-features">
         <div class="announce-feat">
           <span class="announce-feat-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+          <div>
+            <strong>Modo escuro</strong>
+            <p>Paleta Warm Obsidian com tons quentes para leitura prolongada. Ative pelo icone de lua ou siga a preferencia do sistema.</p>
+          </div>
+        </div>
+        <div class="announce-feat">
+          <span class="announce-feat-icon">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           </span>
           <div>
@@ -592,15 +602,6 @@
           <div>
             <strong>Multi-LLM: Gemini + Claude</strong>
             <p>Escolha entre Gemini e Claude como provedor de respostas, com recomendacoes de qualidade integradas.</p>
-          </div>
-        </div>
-        <div class="announce-feat">
-          <span class="announce-feat-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </span>
-          <div>
-            <strong>Qualidade otimizada</strong>
-            <p>Novos defaults que filtram melhor ruido processual e entregam respostas com mais profundidade.</p>
           </div>
         </div>
       </div>

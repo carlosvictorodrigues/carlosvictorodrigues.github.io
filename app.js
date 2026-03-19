@@ -2,10 +2,10 @@
   {
     channel: "Estável",
     platform: "Windows x64",
-    version: "v2026.03.18",
-    size: "Instalador (~8.5 GB)",
-    notes: "Instalador profissional com wizard de instalação, auto-update delta, reinício automático e scraper TJRS.",
-    primaryUrl: "https://drive.google.com/file/d/1fn-QdjXn5m2zbG6jhHgPHHIIRFmi3W2d/view?usp=sharing",
+    version: "v2026.03.19",
+    size: "Completo (~8.8 GB)",
+    notes: "Multi-LLM (Claude/Gemini), auto-update integrado, Informativo Juridico, defaults de qualidade otimizados.",
+    primaryUrl: "https://drive.google.com/file/d/1HuLyM7TpFbn8sWjkRGX7Gp32rhMJv2fo/view?usp=sharing",
     primaryLabel: "↓ Baixar no Google Drive",
     secondaryUrl: "https://github.com/carlosvictorodrigues/ratio",
     secondaryLabel: "Repositório"
@@ -101,4 +101,29 @@ if (statsbar) {
 
 renderDownloads();
 
+// ── Announcement modal ──
+(function () {
+  const ANNOUNCE_KEY = "ratio_announce_dismissed_v2026.03.19";
+  const overlay = document.getElementById("announceOverlay");
+  const closeBtn = document.getElementById("announceClose");
+  const dismissBtn = document.getElementById("announceDismiss");
+  if (!overlay) return;
+
+  function dismiss() {
+    overlay.classList.remove("visible");
+    try { localStorage.setItem(ANNOUNCE_KEY, "1"); } catch (_) {}
+  }
+
+  if (closeBtn) closeBtn.addEventListener("click", dismiss);
+  if (dismissBtn) dismissBtn.addEventListener("click", dismiss);
+  overlay.addEventListener("click", function (e) {
+    if (e.target === overlay) dismiss();
+  });
+
+  // Show after a short delay if not dismissed
+  try {
+    if (localStorage.getItem(ANNOUNCE_KEY)) return;
+  } catch (_) {}
+  setTimeout(function () { overlay.classList.add("visible"); }, 800);
+})();
 

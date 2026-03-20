@@ -2,9 +2,9 @@
   {
     channel: "Estável",
     platform: "Windows x64",
-    version: "v2026.03.19",
+    version: "v2026.03.20",
     size: "Completo (~8.8 GB)",
-    notes: "Multi-LLM (Claude/Gemini), auto-update integrado, Informativo Juridico, defaults de qualidade otimizados.",
+    notes: "Acervo TJSP (15.412 decisões), Informativo com resumos de IA, modo escuro aprimorado, auto-update integrado.",
     primaryUrl: "https://drive.google.com/file/d/1HuLyM7TpFbn8sWjkRGX7Gp32rhMJv2fo/view?usp=sharing",
     primaryLabel: "↓ Baixar no Google Drive",
     secondaryUrl: "https://github.com/carlosvictorodrigues/ratio",
@@ -103,7 +103,7 @@ renderDownloads();
 
 // ── Announcement modal ──
 (function () {
-  const ANNOUNCE_KEY = "ratio_announce_dismissed_v2026.03.19";
+  const ANNOUNCE_KEY = "ratio_announce_dismissed_v2026.03.20";
   const overlay = document.getElementById("announceOverlay");
   const closeBtn = document.getElementById("announceClose");
   const dismissBtn = document.getElementById("announceDismiss");

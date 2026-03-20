@@ -5,7 +5,7 @@
     version: "v2026.03.20",
     size: "Completo (~8.8 GB)",
     notes: "Acervo TJSP (15.412 decisões), Informativo com resumos de IA, modo escuro aprimorado, auto-update integrado.",
-    primaryUrl: "https://drive.google.com/file/d/1HuLyM7TpFbn8sWjkRGX7Gp32rhMJv2fo/view?usp=sharing",
+    primaryUrl: "https://drive.google.com/file/d/16-twvjn8wJ86zj1HCENFoQkdpRt8Aj0F/view?usp=sharing",
     primaryLabel: "↓ Baixar no Google Drive",
     secondaryUrl: "https://github.com/carlosvictorodrigues/ratio",
     secondaryLabel: "Repositório"

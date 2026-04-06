@@ -403,25 +403,36 @@
       <p class="section-sub">Seção dedicada ao histórico consolidado da versão publicada no site.</p>
       <div class="updates-grid">
         <div class="updates-current">
-          <p class="patch-notes-title">Versão atual · v2026.03.20</p>
-          <h3 class="updates-current-title">Acervo TJSP, Informativo com resumos de IA e melhorias de interface</h3>
-          <p class="updates-current-sub">O Ratio agora inclui 15.412 decisões do Tribunal de Justiça de São Paulo, com Informativo Jurídico expandido com resumos de IA e meses colapsáveis.</p>
+          <p class="patch-notes-title">Versão atual · v2026.04.06</p>
+          <h3 class="updates-current-title">Import JSON (DataJud) e cópia de ementas em lote</h3>
+          <p class="updates-current-sub">O Meu Acervo agora aceita arquivos JSON no formato DataJud, permitindo importar milhares de decisões judiciais de qualquer tribunal. Além disso, agora é possível copiar ementas individualmente ou em lote diretamente do painel de fontes.</p>
           <div class="updates-current-chips">
             <span class="update-chip">Estável</span>
             <span class="update-chip">Windows x64</span>
-            <span class="update-chip">Atualizado em 20/03/2026</span>
+            <span class="update-chip">Atualizado em 06/04/2026</span>
           </div>
           <ul class="patch-notes-list">
-            <li><strong>Acervo TJSP integrado</strong> — 15.412 decisões do Tribunal de Justiça de São Paulo, extraídas de 74 volumes das Revistas de Jurisprudência, agora disponíveis para consulta. O TJSP opera em base isolada, sem interferir no acervo STF/STJ.</li>
-            <li><strong>Filtro por tribunal expandido</strong> — novo checkbox TJSP na seção Tribunal, ao lado de STF e STJ. Selecione qualquer combinação para direcionar sua pesquisa.</li>
-            <li><strong>Fontes de pesquisa reorganizadas</strong> — bases oficiais (STF, STJ, TJSP) são controladas pela seção Tribunal. A seção Fontes passou a exibir apenas bases do usuário (Meu Acervo).</li>
-            <li><strong>Informativo com meses colapsáveis</strong> — os meses do Informativo Jurídico agora abrem e fecham individualmente, facilitando a navegação pelo histórico de decisões.</li>
-            <li><strong>Resumos de IA no Informativo</strong> — cada mês exibe um resumo gerado por IA com os destaques das decisões daquele período.</li>
-            <li><strong>Modo escuro aprimorado</strong> — correções no dark mode para maior consistência visual em todos os componentes.</li>
-            <li><strong>Alertas temáticos com verificação automática</strong> — os alertas por tema de interesse verificam novidades automaticamente ao abrir o app.</li>
+            <li><strong>Import JSON no Meu Acervo</strong> — o Meu Acervo agora aceita arquivos <code>.json</code> no formato DataJud além de PDF. O Ratio detecta automaticamente as decisões no JSON, extrai ementa, tribunal, processo, relator, órgão julgador e data de julgamento.</li>
+            <li><strong>Importação por pasta com mix PDF+JSON</strong> — o fluxo de "selecionar pasta inteira" agora inclui arquivos JSON junto com PDFs, processando ambos no mesmo lote.</li>
+            <li><strong>Copiar ementa individual</strong> — cada card de fonte no Dossiê Documental agora tem um botão de cópia que aparece ao passar o mouse. Um clique copia a ementa formatada com tribunal, processo, relator e data.</li>
+            <li><strong>Cópia de ementas em lote</strong> — novo botão no cabeçalho de Anexos abre um modal de seleção onde você pode escolher quais ementas copiar. Suporta "selecionar todas" e cópia formatada com numeração.</li>
+            <li><strong>Pipeline otimizado para JSON</strong> — arquivos JSON pulam OCR e limpeza por IA (o texto já é limpo), economizando cota da API Gemini e acelerando a indexação.</li>
+            <li><strong>Progresso com contagem de decisões</strong> — durante a indexação de JSONs, o progresso agora mostra quantas decisões foram extraídas, além do número de arquivos processados.</li>
           </ul>
         </div>
         <div class="updates-history">
+          <details class="update-history-item">
+            <summary>Patch notes · v2026.03.20 (Acervo TJSP e Informativo com IA)</summary>
+            <div class="update-history-body">
+              <ul class="patch-notes-list">
+                <li><strong>Acervo TJSP integrado</strong> — 15.412 decisões do Tribunal de Justiça de São Paulo, extraídas de 74 volumes das Revistas de Jurisprudência.</li>
+                <li><strong>Filtro por tribunal expandido</strong> — novo checkbox TJSP na seção Tribunal, ao lado de STF e STJ.</li>
+                <li><strong>Fontes de pesquisa reorganizadas</strong> — bases oficiais controladas pela seção Tribunal; Fontes exibe apenas bases do usuário.</li>
+                <li><strong>Informativo com meses colapsáveis e resumos de IA</strong> — navegação facilitada e destaques gerados por IA.</li>
+                <li><strong>Alertas temáticos com verificação automática</strong> — alertas por tema verificam novidades ao abrir o app.</li>
+              </ul>
+            </div>
+          </details>
           <details class="update-history-item">
             <summary>Patch notes · v2026.03.19 (Dark mode, multi-LLM e auto-update)</summary>
             <div class="update-history-body">

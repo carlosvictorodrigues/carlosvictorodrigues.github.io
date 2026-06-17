@@ -36,7 +36,7 @@ def test_updates_section_prioritizes_current_release_and_collapsible_history():
     updates = html.split('id="atualizacoes"', 1)[1].split("</section>", 1)[0]
 
     assert 'class="updates-current"' in updates
-    assert "Versao atual" in updates
+    assert "Versão atual" in updates
     assert 'class="update-chip"' in updates
     assert '<details class="update-history-item"' in updates
 

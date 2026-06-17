@@ -24,6 +24,7 @@
 
   --max-w: 1180px;
   --radius: 8px;
+  --topbar-h: 40px;
 }
 
 /* ─── Reset ─── */
@@ -37,6 +38,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--topbar-h) + 72px);
 }
 
 body {
@@ -64,7 +66,7 @@ strong {
 /* ─── Nav ─── */
 .nav {
   position: fixed;
-  top: 0;
+  top: var(--topbar-h);
   left: 0;
   right: 0;
   z-index: 100;
@@ -198,7 +200,7 @@ strong {
   gap: 48px;
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 120px 28px 80px;
+  padding: calc(120px + var(--topbar-h)) 28px 80px;
   overflow: hidden;
 }
 
@@ -1127,7 +1129,7 @@ strong {
 @media (max-width: 980px) {
   .hero {
     grid-template-columns: 1fr;
-    padding-top: 100px;
+    padding-top: calc(100px + var(--topbar-h));
     min-height: auto;
     gap: 48px;
   }
@@ -1947,5 +1949,103 @@ strong {
 
   .announce-actions {
     flex-direction: column;
+  }
+}
+
+/* ─── Top promo bar (Jusratio) ─── */
+.jr-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  height: var(--topbar-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 44px;
+  background: #17150f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  font-size: 13px;
+  color: #cfcabd;
+  overflow: hidden;
+}
+
+.jr-topbar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.jr-topbar-link strong {
+  color: var(--white);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.jr-topbar-mark {
+  color: #8c8678;
+}
+
+.jr-topbar-arrow {
+  color: var(--white);
+}
+
+.jr-topbar-short {
+  display: none;
+}
+
+.jr-topbar-close {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #6f6a5f;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.jr-topbar-close:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.topbar-hidden {
+  --topbar-h: 0px;
+}
+
+.topbar-hidden .jr-topbar {
+  display: none;
+}
+
+/* Header da página de transição /jusratio.html */
+.jr-hero {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: calc(var(--topbar-h) + 132px) 28px 56px;
+}
+
+@media (max-width: 640px) {
+  .jr-topbar {
+    font-size: 12px;
+    padding: 0 38px;
+  }
+
+  .jr-topbar-full {
+    display: none;
+  }
+
+  .jr-topbar-short {
+    display: inline;
   }
 }

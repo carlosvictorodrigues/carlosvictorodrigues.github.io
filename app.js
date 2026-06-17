@@ -101,29 +101,40 @@ if (statsbar) {
 
 renderDownloads();
 
-// ── Announcement modal ──
+// ── Jusratio entry popup (replaces old version modal) ──
 (function () {
-  const ANNOUNCE_KEY = "ratio_announce_dismissed_v2026.03.20";
+  const POPUP_KEY = "ratio_jusratio_popup_v1";
   const overlay = document.getElementById("announceOverlay");
   const closeBtn = document.getElementById("announceClose");
-  const dismissBtn = document.getElementById("announceDismiss");
+  const ctaBtn = document.getElementById("announceCta");
   if (!overlay) return;
 
   function dismiss() {
     overlay.classList.remove("visible");
-    try { localStorage.setItem(ANNOUNCE_KEY, "1"); } catch (_) {}
+    try { localStorage.setItem(POPUP_KEY, "1"); } catch (_) {}
   }
 
   if (closeBtn) closeBtn.addEventListener("click", dismiss);
-  if (dismissBtn) dismissBtn.addEventListener("click", dismiss);
+  if (ctaBtn) ctaBtn.addEventListener("click", dismiss);
   overlay.addEventListener("click", function (e) {
     if (e.target === overlay) dismiss();
   });
 
   // Show after a short delay if not dismissed
   try {
-    if (localStorage.getItem(ANNOUNCE_KEY)) return;
+    if (localStorage.getItem(POPUP_KEY)) return;
   } catch (_) {}
   setTimeout(function () { overlay.classList.add("visible"); }, 800);
+})();
+
+// ── Top promo bar dismiss ──
+(function () {
+  const TOPBAR_KEY = "ratio_jusratio_topbar_dismissed_v1";
+  const closeBtn = document.getElementById("jrTopbarClose");
+  if (!closeBtn) return;
+  closeBtn.addEventListener("click", function () {
+    document.documentElement.classList.add("topbar-hidden");
+    try { localStorage.setItem(TOPBAR_KEY, "1"); } catch (_) {}
+  });
 })();
 

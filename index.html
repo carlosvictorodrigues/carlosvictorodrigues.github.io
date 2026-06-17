@@ -27,10 +27,23 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Sans:wght@400;500;600&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=2026.03.20" />
+  <link rel="stylesheet" href="./styles.css?v=2026.06.17" />
 </head>
 
 <body>
+
+  <script>try{if(localStorage.getItem("ratio_jusratio_topbar_dismissed_v1"))document.documentElement.classList.add("topbar-hidden")}catch(e){}</script>
+
+  <!-- Top promo bar -->
+  <div class="jr-topbar" id="jrTopbar">
+    <a class="jr-topbar-link" href="https://jusratio.com.br" target="_blank" rel="noopener">
+      <span class="jr-topbar-mark" aria-hidden="true">✦</span>
+      <span class="jr-topbar-full">O Ratio evoluiu — conheça o <strong>Jusratio</strong>, a IA jurídica na nuvem</span>
+      <span class="jr-topbar-short">O Ratio evoluiu → conheça o <strong>Jusratio</strong></span>
+      <span class="jr-topbar-arrow" aria-hidden="true">→</span>
+    </a>
+    <button class="jr-topbar-close" id="jrTopbarClose" aria-label="Fechar aviso">&times;</button>
+  </div>
 
   <!-- Navigation -->
   <nav class="nav" id="nav">
@@ -46,6 +59,7 @@
         <a href="#atualizacoes" class="nav-link">Atualizações</a>
         <a href="https://docs.google.com/document/d/1rZ2XNo0eouUoUJuacjetvBbXDJZ6jcx8/edit?usp=sharing&ouid=113759300308613331484&rtpof=true&sd=true" target="_blank" rel="noopener" class="nav-link">Manual</a>
         <a href="#apoio" class="nav-link">Apoio</a>
+        <a href="./jusratio.html" class="nav-link">Jusratio</a>
         <a href="https://github.com/carlosvictorodrigues/ratio" target="_blank" rel="noopener"
           class="nav-link nav-link-gh">
           <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
@@ -581,6 +595,7 @@
         <span>RATIO · Pesquisa Jurisprudencial</span>
       </div>
       <div class="footer-links">
+        <a href="./jusratio.html">Jusratio</a>
         <a href="https://github.com/carlosvictorodrigues/ratio" target="_blank" rel="noopener">GitHub</a>
         <a href="https://docs.google.com/document/d/1rZ2XNo0eouUoUJuacjetvBbXDJZ6jcx8/edit?usp=sharing&ouid=113759300308613331484&rtpof=true&sd=true" target="_blank" rel="noopener">Manual</a>
         <a href="https://github.com/carlosvictorodrigues/ratio/blob/main/LICENSE" target="_blank"
@@ -595,55 +610,50 @@
     </div>
   </footer>
 
-  <!-- Update announcement modal -->
+  <!-- Jusratio entry popup -->
   <div class="announce-overlay" id="announceOverlay">
     <div class="announce-modal" id="announceModal">
       <button class="announce-close" id="announceClose" aria-label="Fechar">&times;</button>
-      <div class="announce-badge">NOVA VERSÃO</div>
-      <h2 class="announce-title">Ratio v2026.03.20</h2>
-      <p class="announce-sub">Atualização importante para todos os usuários</p>
+      <div class="announce-badge">Evolução</div>
+      <h2 class="announce-title">Conheça o Jusratio</h2>
+      <p class="announce-sub">O Ratio evoluiu para a nuvem. O app local continua gratuito — e agora há a plataforma completa.</p>
       <div class="announce-features">
         <div class="announce-feat">
           <span class="announce-feat-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           </span>
           <div>
-            <strong>Acervo TJSP</strong>
-            <p>15.412 decisões do Tribunal de Justiça de São Paulo integradas ao Ratio, com filtro dedicado na seção Tribunal.</p>
+            <strong>Fontes verificáveis</strong>
+            <p>Cada resposta traz processo, relator, data e link direto para o acórdão original.</p>
           </div>
         </div>
         <div class="announce-feat">
           <span class="announce-feat-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </span>
           <div>
-            <strong>Informativo com resumos de IA</strong>
-            <p>Meses colapsáveis e resumos gerados por IA com os destaques de cada período.</p>
+            <strong>Controle de vigência</strong>
+            <p>Alerta automático de overruling quando uma tese é superada ou modificada.</p>
           </div>
         </div>
         <div class="announce-feat">
           <span class="announce-feat-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           </span>
           <div>
-            <strong>Modo escuro aprimorado</strong>
-            <p>Correções visuais em todos os componentes para uma experiência mais consistente no dark mode.</p>
+            <strong>Integração com LLMs</strong>
+            <p>Conecte Claude, ChatGPT e Gemini e transforme-os em especialistas em direito.</p>
           </div>
         </div>
       </div>
-      <p class="announce-note">Se você já tem o Ratio instalado, a atualização será aplicada automaticamente pelo auto-update.</p>
       <div class="announce-actions">
-        <a href="https://drive.google.com/file/d/16-twvjn8wJ86zj1HCENFoQkdpRt8Aj0F/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary announce-btn">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Baixar v2026.03.20
-        </a>
-        <button class="btn btn-ghost announce-btn" id="announceDismiss">Já atualizei</button>
+        <a href="https://jusratio.com.br" target="_blank" rel="noopener" class="btn btn-primary announce-btn" id="announceCta">Conhecer o Jusratio →</a>
       </div>
     </div>
   </div>
 
-  <script src="./app.js?v=2026.03.20"></script>
-  <script src="./rag-animation.js?v=2026.03.20"></script>
+  <script src="./app.js?v=2026.06.17"></script>
+  <script src="./rag-animation.js?v=2026.06.17"></script>
 </body>
 
 </html>
